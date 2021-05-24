@@ -13,7 +13,7 @@ public class PlayerCamera : MonoBehaviour
     void Start()
     {
         CameraDummy = new GameObject("CamDummy");
-		//FollowTarget.GetComponent<script>().SetDummyCam(CameraDummy);
+		FollowTarget.GetComponent<PlayerMovement>().SetCameraDummy(CameraDummy);
     }
 
     // Update is called once per frame
