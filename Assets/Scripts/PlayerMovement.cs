@@ -30,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
 	//estado atual do jogador
 	public PlayerState State;
 	
-    // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
@@ -41,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
 		CameraDummy = dummy;
 	}
 
-    // Update is called once per frame
     void Update()
     {
 		//direção do movimento

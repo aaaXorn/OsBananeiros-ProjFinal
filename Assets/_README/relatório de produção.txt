@@ -1,0 +1,4 @@
+JOG-MA3 Os Bananeiros
+
+Renan Carr Ribeiro Pesciotto
+Scripts: PlayerCamera, PlayerMovement, ItemGrab
