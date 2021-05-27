@@ -9,14 +9,12 @@ public class PlayerCamera : MonoBehaviour
 	
 	public float adjustY, transformAdjustY, adjustDistance, adjustRotation;
 	
-    // Start is called before the first frame update
     void Start()
     {
         CameraDummy = new GameObject("CamDummy");
-		//FollowTarget.GetComponent<script>().SetDummyCam(CameraDummy);
+		FollowTarget.GetComponent<PlayerMovement>().SetCameraDummy(CameraDummy);
     }
 
-    // Update is called once per frame
     void Update()
     {
 		CameraDummy.transform.position = FollowTarget.transform.position;

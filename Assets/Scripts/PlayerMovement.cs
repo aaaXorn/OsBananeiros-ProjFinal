@@ -7,23 +7,29 @@ public class PlayerMovement : MonoBehaviour
 	Rigidbody rigid;
 	GameObject CameraDummy;
 	
-	Vector3 Movement;//direção do movimento
-	public float moveForce;//força/velocidade do movimento
+	Vector3 Movement, VelocityWOY;//direção do movimento
+	public float moveForce, dragForce;//força/velocidade do movimento
 	public float speedLimiterMult, speedLimiterPlus;//limitam a velocidade máxima
+	[SerializeField]
+	bool grab;//se o jogador está agarrando algo
 	
-	//se o jogador está agarrando algo ou não
-	bool grab;
+	bool mayJump;//se o jogador pode pular
+	public float jumpRaycastSize;//quão perto do chão o jogador tem que estar pra pular
+	public float jumpForce;//força do pulo
+	float jumpTimer;//timer da força do pulo
+	public float jumpDuration;//duração do pulo, afeta a distância máxima segurando space
+	
 	
 	//estados do jogador
 	public enum PlayerState
 	{
 		Idle,
 		Walk,
+		Jump,
 	}
 	//estado atual do jogador
 	public PlayerState State;
 	
-    // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
@@ -34,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
 		CameraDummy = dummy;
 	}
 
-    // Update is called once per frame
     void Update()
     {
 		//direção do movimento
@@ -48,17 +53,37 @@ public class PlayerMovement : MonoBehaviour
 		{
 			transform.forward = Vector3.Slerp(transform.forward, Movement, Time.deltaTime * 10);
 		}
+		
+		//checa se o jogador pode pular
+		mayJump = Physics.Raycast(transform.position, Vector3.down,jumpRaycastSize);
+		Debug.DrawLine(transform.position, transform.position + Vector3.down, Color.white, jumpRaycastSize);
+		
+		//pulo
+		if(Input.GetButtonDown("Jump"))
+		{
+			if(mayJump)
+			{
+				ChangeState(PlayerState.Jump);
+			}
+		}
     }
 	
 	void FixedUpdate()
 	{
 		float velocity = rigid.velocity.magnitude;
 		
-		//
+		//movimento e limite de velocidade
 		rigid.AddForce((Movement * moveForce) / (velocity * speedLimiterMult + speedLimiterPlus));
+		//anim.SetFloat
+		
+		//tira o Y do velocity
+		VelocityWOY = new Vector3(rigid.velocity.x, 0, rigid.velocity.z);
+		//estabiliza o movimento
+		rigid.AddForce(-VelocityWOY * dragForce);
 	}
 	
-	public void ChangeState(PlayerState thisState)//função para facilitar a mudança de estados
+	//função para facilitar a mudança de estados
+	public void ChangeState(PlayerState thisState)
 	{
 		State = thisState;
 		StartCoroutine(State.ToString());
@@ -85,6 +110,25 @@ public class PlayerMovement : MonoBehaviour
 		{
 			yield return new WaitForFixedUpdate();
 			if(rigid.velocity.magnitude < 0.1f)
+			{
+				ChangeState(PlayerState.Idle);
+			}
+		}
+	}
+	
+	//jogador pulando
+	IEnumerator Jump()
+	{
+		jumpTimer = jumpDuration;
+		
+		while(State == PlayerState.Jump)
+		{
+			yield return new WaitForFixedUpdate();
+			
+			rigid.AddForce(Vector3.up * jumpForce * jumpTimer);
+			
+			jumpTimer -= Time.fixedDeltaTime;
+			if(jumpTimer <= 0)
 			{
 				ChangeState(PlayerState.Idle);
 			}
