@@ -2,3 +2,6 @@ JOG-MA3 Os Bananeiros
 
 Renan Carr Ribeiro Pesciotto
 Scripts: PlayerCamera, PlayerMovement, ItemGrab
+
+Victor Hugo Teixeira Pontes
+Narrativa: RoteiroFase1, background+premissa
