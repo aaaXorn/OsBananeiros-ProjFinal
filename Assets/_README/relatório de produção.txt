@@ -1,4 +1,7 @@
 JOG-MA3 Os Bananeiros
 
+Gabriel Kepecs de Oliveira
+Modelos: Poção, Imã, Bebedouro, Chave de Fenda.
+
 Renan Carr Ribeiro Pesciotto
-Scripts: PlayerCamera, PlayerMovement, ItemGrab
+Scripts: PlayerCamera, PlayerMovement, ItemGrab, MagnetPickup.

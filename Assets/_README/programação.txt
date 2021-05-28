@@ -1,8 +1,11 @@
 PlayerCamera:
-Ligado à camera, faz ela seguir o jogador se movendo e rotacionando.
+Ligado à camera. Faz ela seguir o jogador se movendo e rotacionando.
 
 PlayerMovement:
-Ligado ao jogador, faz ele poder se mover e pular.
+Ligado ao jogador. Faz ele poder se mover e pular.
 
 ItemGrab:
-Ligado ao objeto Grab do jogador, faz o jogador poder agarrar pickups e levá-los com ele.
+Ligado ao objeto Grab do jogador. Faz o jogador poder agarrar pickups e levá-los com ele.
+
+MagnetPull:
+Ligado ao pickup de imã. Cria um raycast usado para aplicar força em outros pickups, puxando eles.
