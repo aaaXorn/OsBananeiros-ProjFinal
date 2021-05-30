@@ -9,3 +9,6 @@ Ligado ao objeto Grab do jogador. Faz o jogador poder agarrar pickups e levá-lo
 
 MagnetPull:
 Ligado ao pickup de imã. Cria um raycast usado para aplicar força em outros pickups, puxando eles.
+
+Pause:
+Ligado ao objeto PauseGame. Pausa o jogo com Time.timeScale.

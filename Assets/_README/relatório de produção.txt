@@ -4,4 +4,4 @@ Gabriel Kepecs de Oliveira
 Modelos: Poção, Imã, Bebedouro, Chave de Fenda.
 
 Renan Carr Ribeiro Pesciotto
-Scripts: PlayerCamera, PlayerMovement, ItemGrab, MagnetPickup.
+Scripts: PlayerCamera, PlayerMovement, ItemGrab, MagnetPickup, Pause.

@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
 	Rigidbody rigid;
 	GameObject CameraDummy;
+	[SerializeField]
+	Pause pause;
 	
 	Vector3 Movement, VelocityWOY;//direção do movimento
 	public float moveForce, dragForce;//força/velocidade do movimento
@@ -58,8 +60,8 @@ public class PlayerMovement : MonoBehaviour
 		mayJump = Physics.Raycast(transform.position, Vector3.down, jumpRaycastSize);
 		Debug.DrawLine(transform.position, transform.position + (Vector3.down * jumpRaycastSize), Color.white);
 		
-		//pulo
-		if(Input.GetButtonDown("Jump"))
+		//pulo, não acontece quando o jogo ta pausado
+		if(!pause.gamePaused && Input.GetButtonDown("Jump"))
 		{
 			if(mayJump)
 			{
