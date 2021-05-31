@@ -10,7 +10,6 @@ public class Pause : MonoBehaviour
 	//velocidade do tempo quando o jogo está despausado
     float unpausedTimeScale = 1;
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetButtonDown("Pause"))

@@ -12,3 +12,18 @@ Ligado ao pickup de imã. Cria um raycast usado para aplicar força em outros pi
 
 Pause:
 Ligado ao objeto PauseGame. Pausa o jogo com Time.timeScale.
+
+PlayerHealth:
+Ligado ao jogador. Tem as funções:
+-TakeDamage(int dmg): Da dano no jogador
+-RestoreHP(int heal): Cura a vida do jogador
+-SetText(): Atualiza o total de vida na UI. Chamado em Start, TakeDamage e RestoreHP
+
+DamagePlayer:
+Ligado a objetos que dão dano no jogador. Chama TakeDamage se colide com o Player, pode ou não ser deletado quando colide com um objeto.
+
+HealPlayer:
+Parecido com DamagePlayer, só que chama RestoreHP em vez de TakeDamage.
+
+KeyActivate:
+Ligado a objetos que funcionam como uma chave. Quando colidem com um objeto, checa se a tag desse objeto é igual a string keyType. Se for, chama uma função desse objeto com SendMessage(string message).

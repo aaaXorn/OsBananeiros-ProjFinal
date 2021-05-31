@@ -21,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
 	float jumpTimer;//timer da força do pulo
 	public float jumpDuration;//duração do pulo, afeta a distância máxima segurando space
 	
+	[SerializeField]
+	bool dying, dead;
+	public float deathTime;
 	
 	//estados do jogador
 	public enum PlayerState
@@ -28,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 		Idle,
 		Walk,
 		Jump,
+		Dead,
 	}
 	//estado atual do jogador
 	public PlayerState State;
@@ -44,44 +48,50 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-		//direção do movimento
-        Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-		//faz a direção do movimento ser baseada na rotação da camera
-		if(CameraDummy) Movement = CameraDummy.transform.TransformDirection(Movement);
-		
-		//faz o jogador rotacionar para a direção do movimento
-		// !grab para ele não rotacionar enquanto agarra/empurra algo
-		if(Movement.magnitude > 0 && !grab)
+		if(!dying)
 		{
-			transform.forward = Vector3.Slerp(transform.forward, Movement, Time.deltaTime * 10);
-		}
-		
-		//checa se o jogador pode pular
-		mayJump = Physics.Raycast(transform.position, Vector3.down, jumpRaycastSize);
-		Debug.DrawLine(transform.position, transform.position + (Vector3.down * jumpRaycastSize), Color.white);
-		
-		//pulo, não acontece quando o jogo ta pausado
-		if(!pause.gamePaused && Input.GetButtonDown("Jump"))
-		{
-			if(mayJump)
+			//direção do movimento
+			Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+			//faz a direção do movimento ser baseada na rotação da camera
+			if(CameraDummy) Movement = CameraDummy.transform.TransformDirection(Movement);
+			
+			//faz o jogador rotacionar para a direção do movimento
+			// !grab para ele não rotacionar enquanto agarra/empurra algo
+			if(Movement.magnitude > 0 && !grab)
 			{
-				ChangeState(PlayerState.Jump);
+				transform.forward = Vector3.Slerp(transform.forward, Movement, Time.deltaTime * 10);
+			}
+			
+			//checa se o jogador pode pular
+			mayJump = Physics.Raycast(transform.position, Vector3.down, jumpRaycastSize);
+			Debug.DrawLine(transform.position, transform.position + (Vector3.down * jumpRaycastSize), Color.white);
+			
+			//pulo, não acontece quando o jogo ta pausado
+			if(!pause.gamePaused && Input.GetButtonDown("Jump"))
+			{
+				if(mayJump)
+				{
+					ChangeState(PlayerState.Jump);
+				}
 			}
 		}
     }
 	
 	void FixedUpdate()
 	{
-		float velocity = rigid.velocity.magnitude;
-		
-		//movimento e limite de velocidade
-		rigid.AddForce((Movement * moveForce) / (velocity * speedLimiterMult + speedLimiterPlus));
-		//anim.SetFloat
-		
-		//tira o Y do velocity
-		VelocityWOY = new Vector3(rigid.velocity.x, 0, rigid.velocity.z);
-		//estabiliza o movimento
-		rigid.AddForce(-VelocityWOY * dragForce);
+		if(!dying)
+		{
+			float velocity = rigid.velocity.magnitude;
+			
+			//movimento e limite de velocidade
+			rigid.AddForce((Movement * moveForce) / (velocity * speedLimiterMult + speedLimiterPlus));
+			//anim.SetFloat
+			
+			//tira o Y do velocity
+			VelocityWOY = new Vector3(rigid.velocity.x, 0, rigid.velocity.z);
+			//estabiliza o movimento
+			rigid.AddForce(-VelocityWOY * dragForce);
+		}
 	}
 	
 	//função para facilitar a mudança de estados
@@ -135,5 +145,13 @@ public class PlayerMovement : MonoBehaviour
 				ChangeState(PlayerState.Idle);
 			}
 		}
+	}
+	
+	//jogador morto
+	IEnumerator Dead()
+	{
+		dying = true;
+		yield return new WaitForSeconds(deathTime);
+		//reload scene
 	}
 }

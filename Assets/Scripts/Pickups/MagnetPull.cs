@@ -11,7 +11,6 @@ public class MagnetPull : MonoBehaviour
 	//informação do que o raycast acertou
 	RaycastHit hitInfo;
 	
-    // Update is called once per frame
     void FixedUpdate()
     {
 		//para visualizar o raycast
