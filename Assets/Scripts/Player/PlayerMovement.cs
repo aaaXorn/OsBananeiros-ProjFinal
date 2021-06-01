@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -152,6 +153,6 @@ public class PlayerMovement : MonoBehaviour
 	{
 		dying = true;
 		yield return new WaitForSeconds(deathTime);
-		//reload scene
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }
