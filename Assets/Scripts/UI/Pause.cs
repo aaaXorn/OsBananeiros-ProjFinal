@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
+	[SerializeField]
+	GameObject PauseMenu;
+	
 	//se o jogo está ou não pausado, usado em partes de outros códigos pro pause funcionar
 	public bool gamePaused = false;
 	
@@ -25,6 +28,8 @@ public class Pause : MonoBehaviour
 	{
 		gamePaused = true;
 		
+		PauseMenu.SetActive(true);
+		
 		//faz o tempo na Unity parar, pausando o jogo
 		Time.timeScale = 0;
 	}
@@ -32,6 +37,8 @@ public class Pause : MonoBehaviour
 	void UnpauseGame()
 	{
 		gamePaused = false;
+		
+		PauseMenu.SetActive(false);
 		
 		//volta o tempo ao normal, despausando o jogo
 		Time.timeScale = unpausedTimeScale;

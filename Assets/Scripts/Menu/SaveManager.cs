@@ -9,12 +9,12 @@ public class SaveManager : MonoBehaviour
     public static SaveManager instance { get; private set; }
 
     //Valores para salvar
+	public string GameLanguage;
     public int UnlockedStages;
 	public string CurrentStage;
 
     private void Awake()
     {
-
         print(Application.persistentDataPath);
         if (instance != null && instance != this)
             Destroy(gameObject);
@@ -31,7 +31,8 @@ public class SaveManager : MonoBehaviour
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/SaveInfo.ratoelho", FileMode.Open);
             PlayerData_Storage data = (PlayerData_Storage)bf.Deserialize(file);
-
+			
+			GameLanguage = data.GameLanguage;
             UnlockedStages = data.UnlockedStages;
 			CurrentStage = data.CurrentStage;
 
@@ -45,6 +46,7 @@ public class SaveManager : MonoBehaviour
         FileStream file = File.Create(Application.persistentDataPath + "/SaveInfo.ratoelho");
         PlayerData_Storage data = new PlayerData_Storage();
 		
+		data.GameLanguage = GameLanguage;
         data.UnlockedStages = UnlockedStages;
 		data.CurrentStage = CurrentStage;
 		
@@ -57,6 +59,7 @@ public class SaveManager : MonoBehaviour
 
 class PlayerData_Storage
 {
+	public string GameLanguage;
     public int UnlockedStages;
 	public string CurrentStage;
 }

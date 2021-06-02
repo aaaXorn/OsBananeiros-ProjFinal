@@ -27,3 +27,9 @@ Parecido com DamagePlayer, só que chama RestoreHP em vez de TakeDamage.
 
 KeyActivate:
 Ligado a objetos que funcionam como uma chave. Quando colidem com um objeto, checa se a tag desse objeto é igual a string keyType. Se for, chama uma função desse objeto com SendMessage(string message).
+
+MenuScenes:
+Ligado ao objeto Buttons da Scene Menu. Deixa o texto na língua certa e contém os voids dos botões do main menu.
+
+PauseMenu:
+ligado ao objeto MenuPause. Similar ao MenuScenes, mas com os textos e voids dos botões do menu de pause.
