@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
 	Rigidbody rigid;
+	[SerializeField]
+	Animator anim;
 	GameObject CameraDummy;
 	[SerializeField]
 	Pause pause;
@@ -65,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
 			
 			//checa se o jogador pode pular
 			mayJump = Physics.Raycast(transform.position, Vector3.down, jumpRaycastSize);
+			anim.SetBool("Grounded", mayJump);
 			Debug.DrawLine(transform.position, transform.position + (Vector3.down * jumpRaycastSize), Color.white);
 			
 			//pulo, não acontece quando o jogo ta pausado
@@ -72,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
 			{
 				if(mayJump)
 				{
+					anim.SetTrigger("Jumping");
 					ChangeState(PlayerState.Jump);
 				}
 			}
@@ -83,10 +87,10 @@ public class PlayerMovement : MonoBehaviour
 		if(!dying)
 		{
 			float velocity = rigid.velocity.magnitude;
+			anim.SetFloat("Velocity", velocity);
 			
 			//movimento e limite de velocidade
 			rigid.AddForce((Movement * moveForce) / (velocity * speedLimiterMult + speedLimiterPlus));
-			//anim.SetFloat
 			
 			//tira o Y do velocity
 			VelocityWOY = new Vector3(rigid.velocity.x, 0, rigid.velocity.z);
