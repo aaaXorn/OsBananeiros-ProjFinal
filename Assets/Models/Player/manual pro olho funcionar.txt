@@ -1,0 +1,8 @@
+bota o prefab
+botão direito -> unpack
+move olhos pro bone de Head
+
+cria um avatar humanoid
+root transform
+
+loop pose

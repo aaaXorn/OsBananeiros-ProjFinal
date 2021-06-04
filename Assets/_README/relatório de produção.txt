@@ -7,4 +7,8 @@ Renan Carr Ribeiro Pesciotto
 Scripts: PlayerCamera, PlayerMovement, ItemGrab, MagnetPickup, Pause, PlayerHealth, DamagePlayer, HealPlayer, KeyActivate, MenuScenes, PauseMenu.
 
 Victor Hugo Teixeira Pontes
-Modelos: Roda de exercícios
+Modelos: Roda de exercícios.
+
+Thomas Mandel Nunes Cavallini
+Modelos: Ratoelho.
+Animações: Ratoelho.
