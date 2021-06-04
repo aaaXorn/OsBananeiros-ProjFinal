@@ -15,11 +15,11 @@ D:/Documentos/GitHub/OsBananeiros-ProjFinal
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58088
+56311
 Successfully changed project path to: D:/Documentos/GitHub/OsBananeiros-ProjFinal
 D:/Documentos/GitHub/OsBananeiros-ProjFinal
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 21.16 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 21.51 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.8f1 (507919d4fff5)
 [Subsystems] Discovering subsystems at path D:/Programas/Unity/Unity Editor/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -35,25 +35,25 @@ Initialize mono
 Mono path[0] = 'D:/Programas/Unity/Unity Editor/2020.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Programas/Unity/Unity Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Programas/Unity/Unity Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56060
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56572
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Programas/Unity/Unity Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000890 seconds.
+Registered in 0.000972 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 21.72 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 23.53 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.708 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000353 seconds.
+Registered in 0.000460 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.661 seconds
+- Completed reload, in  0.666 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -62,41 +62,41 @@ Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1128 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 57.6 MB.
-System memory in use after: 57.6 MB.
+System memory in use after: 57.7 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1571.
-Total: 1.520000 ms (FindLiveObjects: 0.145700 ms CreateObjectMapping: 0.027100 ms MarkObjects: 1.277000 ms  DeleteObjects: 0.068600 ms)
+Total: 1.470000 ms (FindLiveObjects: 0.129100 ms CreateObjectMapping: 0.025300 ms MarkObjects: 1.238800 ms  DeleteObjects: 0.076000 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Models/ratoelhoBETA.fbx
-  artifactKey: Guid(c5202eb30de86b44cb727ceefa170c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ratoelhoBETA.fbx using Guid(c5202eb30de86b44cb727ceefa170c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a5393cf79f4b4a637b6df64f74b7078') in 0.401445 seconds
-  Import took 0.403669 seconds .
+  path: Assets/Models/Player/Rabbit.png
+  artifactKey: Guid(56fbcaab68148e14a93c0e56a31c2c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Rabbit.png using Guid(56fbcaab68148e14a93c0e56a31c2c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52b1a81268c0d18de6204250b442b2c4') in 0.109450 seconds
+  Import took 0.111326 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/Models/Rabbit.png
-  artifactKey: Guid(6fcefffcb1ab5d34998156264cabb187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Rabbit.png using Guid(6fcefffcb1ab5d34998156264cabb187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5970fd535d6c5f8ca4270a93f95df93') in 0.018102 seconds
-  Import took 0.019977 seconds .
+  Time since last request: 0.000256 seconds.
+  path: Assets/Models/Player/Ratoelho_v1.0.fbx
+  artifactKey: Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Ratoelho_v1.0.fbx using Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40e1fa1901a37a645f7e63d6d1a2d238') in 0.325545 seconds
+  Import took 0.327782 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.004694 seconds.
-  path: Assets/Models/Rabbit.png
-  artifactKey: Guid(6fcefffcb1ab5d34998156264cabb187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Rabbit.png using Guid(6fcefffcb1ab5d34998156264cabb187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5970fd535d6c5f8ca4270a93f95df93') in 0.010591 seconds
-  Import took 0.012202 seconds .
+  Time since last request: 0.000166 seconds.
+  path: Assets/Models/Player
+  artifactKey: Guid(d9a4d0c2f7f7aa347bc860e82453eee3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player using Guid(d9a4d0c2f7f7aa347bc860e82453eee3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93b5d4f5a1d56fb71da5a79b3b0d340f') in 0.004269 seconds
+  Import took 0.005575 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 34.934022 seconds.
-  path: Assets/Models/ratoelhoBETA.controller
-  artifactKey: Guid(c4c563ebdbd24ca4dbb281c07c8a2584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ratoelhoBETA.controller using Guid(c4c563ebdbd24ca4dbb281c07c8a2584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fc52b6eb0331f1f3ea0b656dc86d7be') in 0.006170 seconds
-  Import took 0.007987 seconds .
+  Time since last request: 103.290014 seconds.
+  path: Assets/_README/relatório de produção.txt
+  artifactKey: Guid(ae9ae71cecfa0d149886243f59f6dd15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_README/relatório de produção.txt using Guid(ae9ae71cecfa0d149886243f59f6dd15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '553b955da33df4b321862f81788bb629') in 0.025557 seconds
+  Import took 0.027371 seconds .
 
 ========================================================================
 Received Prepare
@@ -104,54 +104,190 @@ Registering precompiled user dll's ...
 Registered in 0.000409 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.654 seconds
+- Completed reload, in  0.606 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1123 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 74.6 MB.
 System memory in use after: 74.7 MB.
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1619.
-Total: 1.403700 ms (FindLiveObjects: 0.146200 ms CreateObjectMapping: 0.025900 ms MarkObjects: 1.185500 ms  DeleteObjects: 0.045200 ms)
+Total: 1.565700 ms (FindLiveObjects: 0.272400 ms CreateObjectMapping: 0.027900 ms MarkObjects: 1.222100 ms  DeleteObjects: 0.042500 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 53.434395 seconds.
-  path: Assets/Models/ratoelhoBETA.fbx
-  artifactKey: Guid(c5202eb30de86b44cb727ceefa170c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ratoelhoBETA.fbx using Guid(c5202eb30de86b44cb727ceefa170c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9acd4ae1a9b5b5da281330ec95a15fa6') in 0.122009 seconds
-  Import took 0.124413 seconds .
+  Time since last request: 67.112410 seconds.
+  path: Assets/_README/relatório de produção.txt
+  artifactKey: Guid(ae9ae71cecfa0d149886243f59f6dd15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_README/relatório de produção.txt using Guid(ae9ae71cecfa0d149886243f59f6dd15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c2faf464dcdec21eb9352d22ec6b271') in 0.021037 seconds
+  Import took 0.022975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.171794 seconds.
+  path: Assets/Models/Player/Ratoelho_v1_0.controller
+  artifactKey: Guid(ae4ec0582bb065d4bb2351682e23395c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Ratoelho_v1_0.controller using Guid(ae4ec0582bb065d4bb2351682e23395c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfe639fad5641392915fd5e30fc6fa9e') in 0.007875 seconds
+  Import took 0.009823 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000402 seconds.
+Registered in 0.000358 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.588 seconds
+- Completed reload, in  0.624 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1123 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 74.6 MB.
 System memory in use after: 74.7 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1623.
-Total: 1.325800 ms (FindLiveObjects: 0.118600 ms CreateObjectMapping: 0.025700 ms MarkObjects: 1.143000 ms  DeleteObjects: 0.037700 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1622.
+Total: 1.491400 ms (FindLiveObjects: 0.140900 ms CreateObjectMapping: 0.027900 ms MarkObjects: 1.279900 ms  DeleteObjects: 0.041300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 274.359883 seconds.
-  path: Assets/Models/ratoelhoBETA.fbx
-  artifactKey: Guid(c5202eb30de86b44cb727ceefa170c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ratoelhoBETA.fbx using Guid(c5202eb30de86b44cb727ceefa170c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd64d7d5e858727a7011e58e6c4dfbe44') in 0.106184 seconds
-  Import took 0.108494 seconds .
+  Time since last request: 15.738006 seconds.
+  path: Assets/Models/Player/Ratoelho_v1.0.fbx
+  artifactKey: Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Ratoelho_v1.0.fbx using Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a01b8daf1579ae21f11e511d9a9c935b') in 0.116246 seconds
+  Import took 0.118594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.393945 seconds.
+  path: Assets/Models/Player/Ratoelho_v1.0.fbx
+  artifactKey: Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Ratoelho_v1.0.fbx using Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd553f293a8ff7cf878f84bf35270b193') in 0.074802 seconds
+  Import took 0.077160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.923589 seconds.
+  path: Assets/Models/Player/Ratoelho_v1.0.fbx
+  artifactKey: Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Ratoelho_v1.0.fbx using Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26cca5f60ee1a1904645e423bf212d29') in 0.041727 seconds
+  Import took 0.044284 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000375 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.634 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1123 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.7 MB.
+System memory in use after: 74.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1626.
+Total: 1.572800 ms (FindLiveObjects: 0.170800 ms CreateObjectMapping: 0.026300 ms MarkObjects: 1.310700 ms  DeleteObjects: 0.063800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 297.413034 seconds.
+  path: Assets/Models/Player/Ratoelho_v1.0.fbx
+  artifactKey: Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Ratoelho_v1.0.fbx using Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f8d5d7755dd52296de919bfed6f3c06') in 0.110802 seconds
+  Import took 0.113252 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000410 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.617 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1123 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.7 MB.
+System memory in use after: 74.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1630.
+Total: 1.577100 ms (FindLiveObjects: 0.151700 ms CreateObjectMapping: 0.029700 ms MarkObjects: 1.350400 ms  DeleteObjects: 0.044300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.095531 seconds.
+  path: Assets/Models/Player/Ratoelho_v1.0.fbx
+  artifactKey: Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Ratoelho_v1.0.fbx using Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15da72e8980884bd1792a09c9a6c2d9e') in 0.115669 seconds
+  Import took 0.118298 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000401 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.606 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1123 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.8 MB.
+System memory in use after: 74.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1634.
+Total: 1.665900 ms (FindLiveObjects: 0.232600 ms CreateObjectMapping: 0.041500 ms MarkObjects: 1.345700 ms  DeleteObjects: 0.045200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.269407 seconds.
+  path: Assets/Models/Player/Ratoelho_v1.0.fbx
+  artifactKey: Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Ratoelho_v1.0.fbx using Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d2de3adb66cd9d4ac03fd3383a01646') in 0.117828 seconds
+  Import took 0.120720 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000378 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.618 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1123 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.8 MB.
+System memory in use after: 74.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1638.
+Total: 1.408700 ms (FindLiveObjects: 0.126700 ms CreateObjectMapping: 0.026200 ms MarkObjects: 1.212200 ms  DeleteObjects: 0.042900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 53.278536 seconds.
+  path: Assets/Models/Player/Ratoelho_v1.0.fbx
+  artifactKey: Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Ratoelho_v1.0.fbx using Guid(98e33f9eb8856ab4e9ade2a7b6ea623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '178129888a5f315ae2d1aac5e0844177') in 0.116134 seconds
+  Import took 0.118689 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

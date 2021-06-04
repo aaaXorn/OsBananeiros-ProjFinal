@@ -8,12 +8,12 @@ public class MenuScenes : MonoBehaviour
 {
 	//menu com as opções de lingua do jogo
 	public GameObject LanguageMenu;
-	//acesso ao SaveManager
+	//acesso ao SaveManager, usado para salvar o jogo e checar variáveis
 	public SaveManager SM;
 	//textos, mudam de acordo com a lingua escolhida pelo jogador
 	public Text txtTest, txtLanguage, txtQuitGame;
 	
-	private void Awake()
+	private void Start()
 	{
 		SetText();
 	}
@@ -40,6 +40,7 @@ public class MenuScenes : MonoBehaviour
 	//fecha o jogo
 	public void ExitGame()
 	{
+		SM.Save();
 		Application.Quit();
 	}
 	
@@ -85,6 +86,7 @@ public class MenuScenes : MonoBehaviour
 	//carrega a scene de teste
 	public void LoadTest()
 	{
+		SM.Save();
 		SceneManager.LoadScene("SampleScene");
 	}
 	

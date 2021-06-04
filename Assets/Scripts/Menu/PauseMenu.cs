@@ -36,12 +36,14 @@ public class PauseMenu : MonoBehaviour
 	//volta para o main menu
     public void MainMenu()
 	{
+		SM.Save();
 		SceneManager.LoadScene("Menu");
 	}
 	
 	//fecha o jogo
 	public void ExitGame()
 	{
+		SM.Save();
 		Application.Quit();
 	}
 }
