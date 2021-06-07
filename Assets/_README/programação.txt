@@ -32,4 +32,7 @@ MenuScenes:
 Ligado ao objeto Buttons da Scene Menu. Deixa o texto na língua certa e contém os voids dos botões do main menu.
 
 PauseMenu:
-ligado ao objeto MenuPause. Similar ao MenuScenes, mas com os textos e voids dos botões do menu de pause.
+Ligado ao objeto MenuPause. Similar ao MenuScenes, mas com os textos e voids dos botões do menu de pause.
+
+Stage1Gate:
+Ligado a porta da gaiola do Stage 1. Abre a porta muda a posição e rotação dela quando colide com a chave.

@@ -5,35 +5,45 @@ using UnityEngine;
 public class ItemGrab : MonoBehaviour
 {
 	public GameObject GrabbedItem;
+	public BoxCollider boxC;
 	
-	bool grabbing;//igual ao Input "Interact", pra poder usar no TriggerStay
+	bool grabbing;//se o jogador está segurando um item
+	bool grabInput;//igual ao Input "Interact", pra poder usar no TriggerStay
 	float grabTimer, grabCD = 1;//cooldown do grab, para evitar bugs
 
     void Update()
     {
-		grabbing = Input.GetButton("Interact");
+		grabInput = Input.GetButton("Interact");
 		
 		if(grabTimer > 0)
 		{
 			grabTimer -= Time.deltaTime;
 		}
 		
-        if(GrabbedItem)
+        if(grabbing)
 		{
-			//gruda o GrabbedItem nesse objeto
-			GrabbedItem.transform.position = transform.position;
-			GrabbedItem.transform.rotation = transform.rotation;
+			if(GrabbedItem)
+			{
+				//gruda o GrabbedItem nesse objeto
+				GrabbedItem.transform.position = transform.position;
+				GrabbedItem.transform.rotation = transform.rotation;
+			}
 			
 			if(grabTimer <= 0)
 			{
-				if(grabbing)
+				if(grabInput || GrabbedItem == null)
 				{
+					grabbing = false;
 					grabTimer = grabCD;
 					
-					//volta o GrabbedItem ao normal
-					GrabbedItem.GetComponent<Rigidbody>().isKinematic = false;
-					//desgruda o GrabbedItem desse objeto
-					GrabbedItem = null;
+					boxC.enabled = false;
+					if(GrabbedItem)
+					{
+						//volta o GrabbedItem ao normal
+						GrabbedItem.GetComponent<BoxCollider>().isTrigger = false;
+						//desgruda o GrabbedItem desse objeto
+						GrabbedItem = null;
+					}
 				}
 			}
 		}
@@ -41,15 +51,19 @@ public class ItemGrab : MonoBehaviour
 	
 	void OnTriggerStay(Collider other)
 	{
-		if(!GrabbedItem && grabTimer <= 0 && other.gameObject.CompareTag("Pickup"))
+		if(!grabbing && grabTimer <= 0 && other.gameObject.CompareTag("Pickup"))
 		{
-			if(grabbing)
+			if(grabInput)
 			{
+				grabbing = true;
 				grabTimer = grabCD;
 				
+				//para impedir o pickup de entrar na parede
+				boxC.enabled = true;
 				//faz o objeto da colisão ser agarrado pelo jogador
 				GrabbedItem = other.gameObject;
-				GrabbedItem.GetComponent<Rigidbody>().isKinematic = true;
+				//pro pickup não bugar o movimento do player
+				GrabbedItem.GetComponent<BoxCollider>().isTrigger = true;
 			}
 		}
 	}

@@ -10,7 +10,9 @@ public class PlayerCamera : MonoBehaviour
 	public GameObject FollowTarget;
 	GameObject CameraDummy;
 	
+	//variáveis que mudam o comportamento da câmera
 	public float adjustY, transformAdjustY, adjustDistance, adjustRotation;
+	public bool mayRotate;
 	
     void Start()
     {
@@ -27,14 +29,17 @@ public class PlayerCamera : MonoBehaviour
 		//posiciona a câmera baseado no CameraDummy
 		transform.position = CameraDummy.transform.position - CameraDummy.transform.forward * adjustDistance + Vector3.up * transformAdjustY;
 		
-		//rotaciona a câmera baseado no CameraDummy
-        transform.LookAt(FollowTarget.transform.position + Vector3.up * adjustY);
-		
-		//para não rotacionar a câmera quando o jogo está pausado
-		if(!pause.gamePaused)
+		if(mayRotate)
 		{
-			//rotaciona o CameraDummy, causando uma rotação na câmera
-			CameraDummy.transform.Rotate(0, Input.GetAxis("Mouse X") * adjustRotation, 0);
+			//rotaciona a câmera baseado no CameraDummy
+			transform.LookAt(FollowTarget.transform.position + Vector3.up * adjustY);
+			
+			//para não rotacionar a câmera quando o jogo está pausado
+			if(!pause.gamePaused)
+			{
+				//rotaciona o CameraDummy, causando uma rotação na câmera
+				CameraDummy.transform.Rotate(0, Input.GetAxis("Mouse X") * adjustRotation, 0);
+			}
 		}
     }
 }
