@@ -15,11 +15,11 @@ C:/Users/Suporte/Documents/GitHub/OsBananeiros-ProjFinal
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59573
+52127
 Successfully changed project path to: C:/Users/Suporte/Documents/GitHub/OsBananeiros-ProjFinal
 C:/Users/Suporte/Documents/GitHub/OsBananeiros-ProjFinal
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 33.76 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 25.81 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.8f1 (507919d4fff5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -35,251 +35,107 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56276
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.031867 seconds.
+Registered in 0.002259 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 33.96 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 34.07 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.735 seconds
+- Completed reload, in  1.334 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000962 seconds.
+Registered in 0.001062 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.042 seconds
+- Completed reload, in  1.505 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.37 seconds
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.24 seconds
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1128 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 57.7 MB.
 System memory in use after: 57.8 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1571.
-Total: 2.093200 ms (FindLiveObjects: 0.161200 ms CreateObjectMapping: 0.037700 ms MarkObjects: 1.795100 ms  DeleteObjects: 0.098000 ms)
+Total: 2.225500 ms (FindLiveObjects: 0.151800 ms CreateObjectMapping: 0.042400 ms MarkObjects: 1.933400 ms  DeleteObjects: 0.096300 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Models/casadagaiolaTESTE1.fbx
-  artifactKey: Guid(5d987a6cc82d9cd46822c233d19b7331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/casadagaiolaTESTE1.fbx using Guid(5d987a6cc82d9cd46822c233d19b7331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '555516b82e42feb1d6ff12d734d74ad0') in 0.316295 seconds
-  Import took 0.318958 seconds .
+  path: Assets/Models/casadagaiolaTESTEAAA.fbx
+  artifactKey: Guid(c0f0abcab8b96eb4a95ddafcce28bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/casadagaiolaTESTEAAA.fbx using Guid(c0f0abcab8b96eb4a95ddafcce28bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1010e69b711a64999823fabe8944aac8') in 21.643411 seconds
+  Import took 21.646667 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3868.171038 seconds.
-  path: Assets/Models/casadagaiolaTESTE2.fbx
-  artifactKey: Guid(2afa12e54d1bb9445bbe017abf0e8227) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/casadagaiolaTESTE2.fbx using Guid(2afa12e54d1bb9445bbe017abf0e8227) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a804abe6f69a83171767c0ef3765265f') in 0.146092 seconds
-  Import took 0.149772 seconds .
+  Time since last request: 145.985480 seconds.
+  path: Assets/Models/casadagaiolaTESTEAAA1.fbx
+  artifactKey: Guid(906f697ba063c1840be29939249233cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/casadagaiolaTESTEAAA1.fbx using Guid(906f697ba063c1840be29939249233cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdfea4b6b3072cbaee8b2059fda7ab94') in 0.124218 seconds
+  Import took 0.127786 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 466.735151 seconds.
-  path: Assets/Models/casadagaiolaTESTE3.fbx
-  artifactKey: Guid(984f03d43f1b3584d81bc2621c734c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/casadagaiolaTESTE3.fbx using Guid(984f03d43f1b3584d81bc2621c734c5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '237f937be4e5021765a6694eb933a479') in 0.088308 seconds
-  Import took 0.091944 seconds .
+  Time since last request: 139.586514 seconds.
+  path: Assets/Models/casadagaiolaTESTEAAA2.fbx
+  artifactKey: Guid(d349d1e9bbb71164fbfe940d2162667f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/casadagaiolaTESTEAAA2.fbx using Guid(d349d1e9bbb71164fbfe940d2162667f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03a9a7a1e814a165869fcd6a42bf7c32') in 0.121936 seconds
+  Import took 0.125721 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3088.105933 seconds.
-  path: Assets/Models/ProjKarting/bancadadelaboratorio.fbx
-  artifactKey: Guid(037df1b054c58a746bd47cfcb97b9f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/bancadadelaboratorio.fbx using Guid(037df1b054c58a746bd47cfcb97b9f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '799dae2c9df5e11e0980e3a8483935fa') in 0.815801 seconds
-  Import took 0.820195 seconds .
+  Time since last request: 220.003771 seconds.
+  path: Assets/Models/casadagaiolaTESTEAAA3.fbx
+  artifactKey: Guid(43e92cf40105e774ea3932a475c43f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/casadagaiolaTESTEAAA3.fbx using Guid(43e92cf40105e774ea3932a475c43f12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '758ca35a72021453c1b56c1d05263839') in 0.216033 seconds
+  Import took 0.219742 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000281 seconds.
-  path: Assets/Models/Player/Ratoelho_v1.2.fbx
-  artifactKey: Guid(235ded93f53bad04ab4d82fd8469b2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Player/Ratoelho_v1.2.fbx using Guid(235ded93f53bad04ab4d82fd8469b2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ec2700051669ee8c8ef331da5544394') in 0.186774 seconds
-  Import took 0.190239 seconds .
+  Time since last request: 197.665799 seconds.
+  path: Assets/Models/casadagaiolaTESTEAAA4.fbx
+  artifactKey: Guid(96555f262bd5d5d4fb40b808f4ed1e2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/casadagaiolaTESTEAAA4.fbx using Guid(96555f262bd5d5d4fb40b808f4ed1e2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8165d27f57a8caab92b2913b3900251b') in 0.122261 seconds
+  Import took 0.126296 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000238 seconds.
-  path: Assets/Models/ProjKarting/Painel-Parede.fbx
-  artifactKey: Guid(63de51dee6e6f7d47a5f3c728f288029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/Painel-Parede.fbx using Guid(63de51dee6e6f7d47a5f3c728f288029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77403b613229b65d5ef0266b4bcb1140') in 0.209310 seconds
-  Import took 0.212489 seconds .
+  Time since last request: 681.354427 seconds.
+  path: Assets/Models/casadagaiolaTESTEAAA5.fbx
+  artifactKey: Guid(8db1a8e675d033044a2fa6614f0e84cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/casadagaiolaTESTEAAA5.fbx using Guid(8db1a8e675d033044a2fa6614f0e84cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ce885d466a40b8c2e68159206af20b1') in 0.125739 seconds
+  Import took 0.130340 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/Models/ProjKarting/Barrel2.fbx
-  artifactKey: Guid(c5dfcc900fff9014f90e48dc9f98ac9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/Barrel2.fbx using Guid(c5dfcc900fff9014f90e48dc9f98ac9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3edeb5c0e49286b05c41aaa6d13566fa') in 0.093066 seconds
-  Import took 0.096180 seconds .
+  Time since last request: 125.541192 seconds.
+  path: Assets/Models/casadagaiolaTESTEAAA6.fbx
+  artifactKey: Guid(e3b7ab60c1728aa45a161701529e4fb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/casadagaiolaTESTEAAA6.fbx using Guid(e3b7ab60c1728aa45a161701529e4fb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90729c0beb6ee3355df90e6238321b31') in 0.109021 seconds
+  Import took 0.114255 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/Models/ProjKarting/tubodeventilacao1.fbx
-  artifactKey: Guid(46372343639de9b4891b996aa3619ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/tubodeventilacao1.fbx using Guid(46372343639de9b4891b996aa3619ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a46b70d4a0e4025b88bbdaf99626603') in 0.222144 seconds
-  Import took 0.226677 seconds .
+  Time since last request: 179.548171 seconds.
+  path: Assets/Models/casadagaiolaTESTEAAA7.fbx
+  artifactKey: Guid(3a03287630d1319428e2c3fd97d0f4d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/casadagaiolaTESTEAAA7.fbx using Guid(3a03287630d1319428e2c3fd97d0f4d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1257151513b19fe81d91b0dd4b75c08') in 0.146263 seconds
+  Import took 0.150959 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000320 seconds.
-  path: Assets/Models/ProjOpenWorld/cenoura.fbx
-  artifactKey: Guid(1316003cb4ffabb4fb60fc20ffb7f02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjOpenWorld/cenoura.fbx using Guid(1316003cb4ffabb4fb60fc20ffb7f02f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82335e97bb976221acf41d8cee7d19e2') in 0.108908 seconds
-  Import took 0.112699 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000267 seconds.
-  path: Assets/Models/ProjKarting/Teleporter.fbx
-  artifactKey: Guid(ebb731688f207ab4da4630eb1647939f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/Teleporter.fbx using Guid(ebb731688f207ab4da4630eb1647939f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e5761a0ca45c1d54634afcb692b3dff') in 0.085732 seconds
-  Import took 0.088941 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/Models/ProjOpenWorld/casa2.fbx
-  artifactKey: Guid(0d0742f1afbadd9458ae3ba121b67f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjOpenWorld/casa2.fbx using Guid(0d0742f1afbadd9458ae3ba121b67f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4f455c63f13ea58e61fbf62c3b97ff7') in 0.197314 seconds
-  Import took 0.200714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000239 seconds.
-  path: Assets/Models/ProjKarting/Generator2.0.fbx
-  artifactKey: Guid(e41179e71a15d1647bf5a691d4f914b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/Generator2.0.fbx using Guid(e41179e71a15d1647bf5a691d4f914b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4556ab41429fe8f7437a91d7daed21ad') in 0.137044 seconds
-  Import took 0.141079 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000324 seconds.
-  path: Assets/Models/ProjOpenWorld/casa1.fbx
-  artifactKey: Guid(82475cf5cd6a24b4c82000effd98a425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjOpenWorld/casa1.fbx using Guid(82475cf5cd6a24b4c82000effd98a425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e481e40a7dd634aee864e510cf8357c2') in 0.342889 seconds
-  Import took 0.346517 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000279 seconds.
-  path: Assets/Models/ProjKarting/Replicator.fbx
-  artifactKey: Guid(4daf5ba99a305014db809701db291948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/Replicator.fbx using Guid(4daf5ba99a305014db809701db291948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8caa20b4b53aa4608fa9f1d89b37de5') in 0.071923 seconds
-  Import took 0.074266 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/Models/ProjKarting/Ceiling 1.fbx
-  artifactKey: Guid(d820ac6acaccd224eb4dd1580f2108fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/Ceiling 1.fbx using Guid(d820ac6acaccd224eb4dd1580f2108fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36d361691ad382112e562ecc16223b86') in 0.055388 seconds
-  Import took 0.058026 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000236 seconds.
-  path: Assets/Models/ProjKarting/Painel-Chao.fbx
-  artifactKey: Guid(050befe44ccf1aa4b892c6bccbc85c9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/Painel-Chao.fbx using Guid(050befe44ccf1aa4b892c6bccbc85c9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '581885b1cc436ccc0bc49e167f7e3b96') in 0.237832 seconds
-  Import took 0.241153 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(cd042c671b9f81f4eaeb17c80016b76e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(cd042c671b9f81f4eaeb17c80016b76e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40837d40d448ea4ba802e8544ae7e219') in 0.009965 seconds
-  Import took 0.012802 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Models/ProjKarting/Barrel.fbx
-  artifactKey: Guid(047519cc88af103448e0138ad6e1bdb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/Barrel.fbx using Guid(047519cc88af103448e0138ad6e1bdb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f41a35462794ce168054e2f0b4def219') in 0.088038 seconds
-  Import took 0.091217 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000255 seconds.
-  path: Assets/Models/ProjKarting/parede.fbx
-  artifactKey: Guid(395d1498a57ec2b41a3ed6f32cd49a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/parede.fbx using Guid(395d1498a57ec2b41a3ed6f32cd49a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f7d08e6c680d880ded675c50b2b5d59') in 0.165472 seconds
-  Import took 0.168659 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/Models/ProjOpenWorld/chave.fbx
-  artifactKey: Guid(6665fdea58074204a9e24b97352c2913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjOpenWorld/chave.fbx using Guid(6665fdea58074204a9e24b97352c2913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a964eca5b58d1105d8b7586df7d242f') in 0.120095 seconds
-  Import took 0.122603 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000243 seconds.
-  path: Assets/Models/ProjKarting/locker.fbx
-  artifactKey: Guid(62fd542e8fe2b064485a15159d418fcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/locker.fbx using Guid(62fd542e8fe2b064485a15159d418fcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdf1fe7eacc7a0cd4cfd7a45a0fe385b') in 0.049073 seconds
-  Import took 0.051521 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000236 seconds.
-  path: Assets/Models/ProjKarting/BG_Platform_-_ventilation 1.fbx
-  artifactKey: Guid(a0afc94e30298d1439b4226bdeffda39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/BG_Platform_-_ventilation 1.fbx using Guid(a0afc94e30298d1439b4226bdeffda39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d13d22db38035aa94a765094d4a7cad') in 0.079353 seconds
-  Import took 0.082445 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000221 seconds.
-  path: Assets/Models/ProjKarting/LUZ.fbx
-  artifactKey: Guid(49a36fb898c8be34dbc7258c09ca8046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/LUZ.fbx using Guid(49a36fb898c8be34dbc7258c09ca8046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48c8720ad2f65a2202bd0e6adc26f5c3') in 0.086845 seconds
-  Import took 0.089569 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 203.703193 seconds.
-  path: Assets/Models/casadagaiolaTESTE4.fbx
-  artifactKey: Guid(91e1970696047bb41b7a5be848c94d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/casadagaiolaTESTE4.fbx using Guid(91e1970696047bb41b7a5be848c94d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a9f28c206050a8a7df375e0cec7a293') in 0.100877 seconds
-  Import took 0.104885 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 187.897852 seconds.
-  path: Assets/Models/casadagaiolaTESTE5.fbx
-  artifactKey: Guid(836bef9470f19494b870137e4c09d01b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/casadagaiolaTESTE5.fbx using Guid(836bef9470f19494b870137e4c09d01b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc742b857fb1e796a3c424578dccf7aa') in 0.102576 seconds
-  Import took 0.105657 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 710.024154 seconds.
-  path: Assets/Models/casadagaiolaTESTE6.fbx
-  artifactKey: Guid(da76360f76784ef41b56a5c9e1e4d2e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/casadagaiolaTESTE6.fbx using Guid(da76360f76784ef41b56a5c9e1e4d2e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8734f4e7af60a9c20760fbdb405a8a7c') in 0.105593 seconds
-  Import took 0.109246 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 475.959912 seconds.
-  path: Assets/Models/casadagaiolaTESTE7.fbx
-  artifactKey: Guid(154ad7e6daac5694da420f5b03622e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/casadagaiolaTESTE7.fbx using Guid(154ad7e6daac5694da420f5b03622e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d63bb535ef2853d7b2fdc71c8e6b098') in 0.131264 seconds
-  Import took 0.134907 seconds .
+  Time since last request: 698.769069 seconds.
+  path: Assets/Models/casadagaiolaTESTEeeeee.fbx
+  artifactKey: Guid(afd35d7a3db97df4aa89c6182e450080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/casadagaiolaTESTEeeeee.fbx using Guid(afd35d7a3db97df4aa89c6182e450080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8029d1a30a04384944a90769b47c151') in 0.183188 seconds
+  Import took 0.188632 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
