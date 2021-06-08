@@ -41,6 +41,9 @@ public class ItemGrab : MonoBehaviour
 					{
 						//volta o GrabbedItem ao normal
 						GrabbedItem.GetComponent<BoxCollider>().isTrigger = false;
+						//para a gravidade em GrabbedItem funcionar normalmente, sem isso ele é catapultado na direção -y
+						GrabbedItem.GetComponent<Rigidbody>().isKinematic = false;
+						
 						//desgruda o GrabbedItem desse objeto
 						GrabbedItem = null;
 					}
@@ -64,6 +67,8 @@ public class ItemGrab : MonoBehaviour
 				GrabbedItem = other.gameObject;
 				//pro pickup não bugar o movimento do player
 				GrabbedItem.GetComponent<BoxCollider>().isTrigger = true;
+				//para a gravidade em GrabbedItem funcionar normalmente quando o jogador o solta
+				GrabbedItem.GetComponent<Rigidbody>().isKinematic = true;
 			}
 		}
 	}

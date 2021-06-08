@@ -7,7 +7,10 @@ public class PlayerHealth : MonoBehaviour
 {
 	//texto que mostra o total de HP no UI
 	public Text txt;
+	//script de PlayerMovement
 	public PlayerMovement PM;
+	//collider do grab, usado em outros scripts pra colisões nesse collider não darem dano no player
+	public BoxCollider GrabCollider;
 	
 	//vida e vida máxima
 	public int HP, maxHP;

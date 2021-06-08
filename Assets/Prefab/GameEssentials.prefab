@@ -3753,6 +3753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 9118190561807714903}
   PM: {fileID: 9118190560055617172}
+  GrabCollider: {fileID: 3869331349387328515}
   HP: 10
   maxHP: 10
 --- !u!54 &9118190560055617173
@@ -3796,7 +3797,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.8, y: 1, z: 1.1}
   m_Center: {x: 0, y: 0.6, z: 1}
 --- !u!1 &9118190560203170255
 GameObject:
@@ -3903,7 +3904,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9118190560428973014}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0.6, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9118190560055617171}
@@ -3920,8 +3921,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.1, z: 0}
+  m_Size: {x: 0.8, y: 1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &9118190560428973012
 MonoBehaviour:
   m_ObjectHideFlags: 0

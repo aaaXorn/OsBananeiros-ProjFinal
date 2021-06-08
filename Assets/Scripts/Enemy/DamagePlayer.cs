@@ -23,7 +23,8 @@ public class DamagePlayer : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-		if(other.gameObject.CompareTag("Player"))
+		//se a colisão for do collider principal do player (e não o de grab)
+		if(other.gameObject.CompareTag("Player") && other.collider != PH.GrabCollider)
 			PH.TakeDamage(damage);
 		
 		if(deleteOnHit)
