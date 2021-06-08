@@ -36,3 +36,6 @@ Ligado ao objeto MenuPause. Similar ao MenuScenes, mas com os textos e voids dos
 
 Stage1Gate:
 Ligado a porta da gaiola do Stage 1. Abre a porta muda a posição e rotação dela quando colide com a chave.
+
+DroneMovement:
+Ligado ao drone do Stage 1. Faz ele se mover em uma elipse e se rotacionar para a face certa apontar para o centro da curva.
