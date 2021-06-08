@@ -8,6 +8,7 @@ Scripts: PlayerCamera, PlayerMovement, ItemGrab, MagnetPickup, Pause, PlayerHeal
 
 Victor Hugo Teixeira Pontes
 Modelos: Roda de exercícios.
+Sons: Musica Base e Drum solo, passos, moeda, pulo, chave, hit, queda e movimento, interação de menu
 
 Thomas Mandel Nunes Cavallini
 Modelos: Ratoelho.
