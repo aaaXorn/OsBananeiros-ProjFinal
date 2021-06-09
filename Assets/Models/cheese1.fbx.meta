@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: 473ddef25ee72ec4b973f69dca2eb975
+guid: dba32fb1fafaee8448bee85feea87116
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -761248903832159718
+    second: Sphere.012|Sphere.012Action
   externalObjects: {}
   materials:
     materialImportMode: 2
