@@ -33,10 +33,11 @@ public class PlayerHealth : MonoBehaviour
 		//da int dmg de dano no jogador até um mínimo de HP == 0
 		for(var i = 0; i < dmg; i++)
 		{
-			if(HP > 0)
+			if(HP > 1)
 				HP--;
 			else
 			{
+				HP--;
 				i = dmg;
 				//jogador morre
 				PM.ChangeState(PlayerMovement.PlayerState.Dead);

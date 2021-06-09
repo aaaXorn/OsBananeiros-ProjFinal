@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
 	//acesso ao SaveManager
 	public SaveManager SM;
+	public TransitionScript TS;
 	//textos, mudam de acordo com a lingua escolhida pelo jogador
 	public Text txtQuitMenu, txtQuitGame;
 	
@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu()
 	{
 		SM.Save();
-		SceneManager.LoadScene("Menu");
+		TS.Transition(false, "Menu");
 	}
 	
 	//fecha o jogo

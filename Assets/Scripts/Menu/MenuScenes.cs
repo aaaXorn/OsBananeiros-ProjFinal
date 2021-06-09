@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class MenuScenes : MonoBehaviour
 {
@@ -10,8 +9,10 @@ public class MenuScenes : MonoBehaviour
 	public GameObject LanguageMenu;
 	//acesso ao SaveManager, usado para salvar o jogo e checar variáveis
 	public SaveManager SM;
+	public TransitionScript TS;
 	//textos, mudam de acordo com a lingua escolhida pelo jogador
-	public Text txtTest, txtLanguage, txtQuitGame;
+	public Text txtTest, txtLanguage, txtQuitGame, 
+				txtStage1;
 	
 	private void Start()
 	{
@@ -27,12 +28,14 @@ public class MenuScenes : MonoBehaviour
 			txtTest.text = "Test";
 			txtLanguage.text = "Language";
 			txtQuitGame.text = "Quit Game";
+			txtStage1.text = "Stage 1";
 			break;
 			
 			case "Portugues":
 			txtTest.text = "Teste";
 			txtLanguage.text = "Língua";
 			txtQuitGame.text = "Sair do Jogo";
+			txtStage1.text = "Nível 1";
 			break;
 		}
 	}
@@ -62,32 +65,36 @@ public class MenuScenes : MonoBehaviour
 	//carrega o primeiro stage
     public void LoadStage1()
 	{
-		SceneManager.LoadScene("Stage1");
+		SM.Save();
+		TS.Transition(false, "Stage1");
 	}
 	
 	//carrega o segundo stage
 	public void LoadStage2()
 	{
-		SceneManager.LoadScene("Stage2");
+		SM.Save();
+		TS.Transition(false, "Stage2");
 	}
 	
 	//carrega o terceiro stage
 	public void LoadStage3()
 	{
-		SceneManager.LoadScene("Stage3");
+		SM.Save();
+		TS.Transition(false, "Stage3");
 	}
 	
 	//carrega o quarto stage
 	public void LoadStage4()
 	{
-		SceneManager.LoadScene("Stage4");
+		SM.Save();
+		TS.Transition(false, "Stage4");
 	}
 	
 	//carrega a scene de teste
 	public void LoadTest()
 	{
 		SM.Save();
-		SceneManager.LoadScene("SampleScene");
+		TS.Transition(false, "SampleScene");
 	}
 	
 	//abre o menu que deixa o jogador escolher a lingua do jogo

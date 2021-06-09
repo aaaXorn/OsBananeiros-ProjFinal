@@ -2408,6 +2408,78 @@ Transform:
   m_Father: {fileID: 2725888253874500219}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5582391958914606465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7502735200643665791}
+  - component: {fileID: 7368125049754866133}
+  - component: {fileID: 5425433529922873773}
+  m_Layer: 5
+  m_Name: TransitionCover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7502735200643665791
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5582391958914606465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 14, y: 8, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9118190560548867909}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1, y: -4}
+  m_SizeDelta: {x: -1096, y: -500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7368125049754866133
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5582391958914606465}
+  m_CullTransparentMesh: 1
+--- !u!114 &5425433529922873773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5582391958914606465}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &5619088546652750528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,6 +3799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3449976841671695347}
   pause: {fileID: 9118190561911838095}
+  TS: {fileID: 7727919144824800127}
   moveForce: 1000
   dragForce: 4
   speedLimiterMult: 2
@@ -3737,7 +3810,7 @@ MonoBehaviour:
   jumpDuration: 0.3
   dying: 0
   dead: 0
-  deathTime: 3
+  deathTime: 1
   State: 0
 --- !u!114 &9118190560055617170
 MonoBehaviour:
@@ -4005,6 +4078,7 @@ RectTransform:
   m_Children:
   - {fileID: 9118190561807714901}
   - {fileID: 9118190560570482952}
+  - {fileID: 7502735200643665791}
   m_Father: {fileID: 9118190560475800493}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4125,6 +4199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SM: {fileID: 9118190561875707656}
+  TS: {fileID: 7727919144824800127}
   txtQuitMenu: {fileID: 9118190560203170253}
   txtQuitGame: {fileID: 9118190561404907228}
 --- !u!1 &9118190560840065371
@@ -4673,8 +4748,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9118190561911838096}
   - component: {fileID: 9118190561911838095}
+  - component: {fileID: 7727919144824800127}
   m_Layer: 0
-  m_Name: PauseGame
+  m_Name: GameSystems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4708,3 +4784,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 9118190560570482953}
   gamePaused: 0
+--- !u!114 &7727919144824800127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9118190561911838097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0b2e98eba18624a9e39223e38a5ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransitionObj: {fileID: 5425433529922873773}
+  start: 0
+  varSet: 0
+  open: 0
+  sceneName: 
+  transitionTimer: 0

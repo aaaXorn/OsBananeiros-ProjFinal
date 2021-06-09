@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 	GameObject CameraDummy;
 	[SerializeField]
 	Pause pause;
+	[SerializeField]
+	TransitionScript TS;
 	
 	Vector3 Movement, VelocityWOY;//direção do movimento
 	public float moveForce, dragForce;//força/velocidade do movimento
@@ -97,6 +99,8 @@ public class PlayerMovement : MonoBehaviour
 			//estabiliza o movimento
 			rigid.AddForce(-VelocityWOY * dragForce);
 		}
+		else
+			rigid.velocity = new Vector3(0, rigid.velocity.y, 0);
 	}
 	
 	//função para facilitar a mudança de estados
@@ -157,6 +161,6 @@ public class PlayerMovement : MonoBehaviour
 	{
 		dying = true;
 		yield return new WaitForSeconds(deathTime);
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		TS.Transition(false, SceneManager.GetActiveScene().name);
 	}
 }
