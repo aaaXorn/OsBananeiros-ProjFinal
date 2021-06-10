@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Pickups\Key\KeyActivate.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuScenes.cs" />
      <Compile Include="Assets\Scripts\Pickups\HealPlayer.cs" />
+     <Compile Include="Assets\Scripts\Menu\TransitionScript.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Menu\SaveManager.cs" />
      <Compile Include="Assets\Scripts\Pickups\MagnetPull.cs" />
