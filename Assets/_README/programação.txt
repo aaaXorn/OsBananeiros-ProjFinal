@@ -38,7 +38,10 @@ Stage1Gate:
 Ligado a porta da gaiola do Stage 1. Abre a porta muda a posição e rotação dela quando colide com a chave.
 
 DroneMovement:
-Ligado ao drone do Stage 1. Faz ele se mover em uma elipse e se rotacionar para a face certa apontar para o centro da curva.
+Ligado ao drone do Stage 1. Faz ele se mover em uma elipse (ou círculo) e se rotacionar para a face certa apontar para o centro da curva.
 
 TransitionScript:
 Ligado ao objeto GameSystems ou, na Scene Menu, a Buttons. Faz uma transição simples usando uma RawImage preta e variação de transparência.
+
+PropellerRotation:
+Ligado aos child objects propeller do asset de drone. Faz eles rotationarem.
