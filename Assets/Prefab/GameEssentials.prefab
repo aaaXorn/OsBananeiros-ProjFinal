@@ -3806,7 +3806,7 @@ MonoBehaviour:
   speedLimiterPlus: 1
   grab: 0
   jumpRaycastSize: 0.5
-  jumpForce: 200
+  jumpForce: 250
   jumpDuration: 0.3
   dying: 0
   dead: 0
