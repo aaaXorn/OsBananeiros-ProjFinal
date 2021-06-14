@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class TransitionScript : MonoBehaviour
 {
-	//public GameObject TransitionObj;
+	public SaveManager SM;
+	
 	public RawImage TransitionObj;
 	
 	[SerializeField]
@@ -59,6 +60,8 @@ public class TransitionScript : MonoBehaviour
 				transitionTimer += Time.unscaledDeltaTime;
 				if(transitionTimer >= 1)
 				{
+					SM.Save();
+					
 					//muda a cena para a certa
 					SceneManager.LoadScene(sceneName);
 				}

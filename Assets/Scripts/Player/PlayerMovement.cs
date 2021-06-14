@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 		if(!dying)
 		{
 			//direção do movimento
-			Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+			Movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
 			//faz a direção do movimento ser baseada na rotação da camera
 			if(CameraDummy) Movement = CameraDummy.transform.TransformDirection(Movement);
 			

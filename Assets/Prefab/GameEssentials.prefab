@@ -4738,6 +4738,7 @@ MonoBehaviour:
   GameLanguage: 
   UnlockedStages: 0
   CurrentStage: 
+  S1Checkpoint: 0
 --- !u!1 &9118190561911838097
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,6 +4797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0b2e98eba18624a9e39223e38a5ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SM: {fileID: 9118190561875707656}
   TransitionObj: {fileID: 5425433529922873773}
   start: 0
   varSet: 0

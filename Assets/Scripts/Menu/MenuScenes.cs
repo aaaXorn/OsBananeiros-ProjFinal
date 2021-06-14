@@ -65,6 +65,7 @@ public class MenuScenes : MonoBehaviour
 	//carrega o primeiro stage
     public void LoadStage1()
 	{
+		SM.S1Checkpoint = false;
 		SM.Save();
 		TS.Transition(false, "Stage1");
 	}

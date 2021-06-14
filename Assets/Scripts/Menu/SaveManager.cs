@@ -12,6 +12,7 @@ public class SaveManager : MonoBehaviour
 	public string GameLanguage;
     public int UnlockedStages;
 	public string CurrentStage;
+	public bool S1Checkpoint;
 
     private void Awake()
     {
@@ -35,6 +36,7 @@ public class SaveManager : MonoBehaviour
 			GameLanguage = data.GameLanguage;
             UnlockedStages = data.UnlockedStages;
 			CurrentStage = data.CurrentStage;
+			S1Checkpoint = data.S1Checkpoint;
 
             file.Close();
         }
@@ -49,6 +51,7 @@ public class SaveManager : MonoBehaviour
 		data.GameLanguage = GameLanguage;
         data.UnlockedStages = UnlockedStages;
 		data.CurrentStage = CurrentStage;
+		data.S1Checkpoint = S1Checkpoint;
 		
         bf.Serialize(file, data);
         file.Close();
@@ -62,4 +65,5 @@ class PlayerData_Storage
 	public string GameLanguage;
     public int UnlockedStages;
 	public string CurrentStage;
+	public bool S1Checkpoint;
 }
