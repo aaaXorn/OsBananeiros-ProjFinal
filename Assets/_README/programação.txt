@@ -35,7 +35,7 @@ PauseMenu:
 Ligado ao objeto GameSystems. Similar ao MenuScenes, mas com os textos e voids dos botões do menu de pause.
 
 Stage1Gate:
-Ligado a porta da gaiola do Stage 1. Abre a porta muda a posição e rotação dela quando colide com a chave.
+Ligado a porta da gaiola do Stage 1. Abre a porta muda a posição e rotação dela quando colide com a chave. Quando a porta abre, ativa um checkpoint pro jogador.
 
 DroneMovement:
 Ligado ao drone do Stage 1. Faz ele se mover em uma elipse (ou círculo) e se rotacionar para a face certa apontar para o centro da curva.
@@ -45,3 +45,6 @@ Ligado ao objeto GameSystems ou, na Scene Menu, a Buttons. Faz uma transição s
 
 PropellerRotation:
 Ligado aos child objects propeller do asset de drone. Faz eles rotationarem.
+
+SceneTransition:
+Muda a cena usando uma função do TransitionScript.

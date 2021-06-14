@@ -4,7 +4,7 @@ Gabriel Kepecs de Oliveira
 Modelos: Poção, Imã, Bebedouro, Chave de Fenda, Casa da gaiola, Queijo.
 
 Renan Carr Ribeiro Pesciotto
-Scripts: PlayerCamera, PlayerMovement, ItemGrab, MagnetPickup, Pause, PlayerHealth, DamagePlayer, HealPlayer, KeyActivate, MenuScenes, PauseMenu, Stage1Gate, DroneMovement, TransitionScript, PropellerRotation.
+Scripts: PlayerCamera, PlayerMovement, ItemGrab, MagnetPickup, Pause, PlayerHealth, DamagePlayer, HealPlayer, KeyActivate, MenuScenes, PauseMenu, Stage1Gate, DroneMovement, TransitionScript, PropellerRotation, SceneTransition.
 
 Victor Hugo Teixeira Pontes
 Modelos: Roda de exercícios.
