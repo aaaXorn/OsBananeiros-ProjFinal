@@ -3693,7 +3693,7 @@ MonoBehaviour:
   pause: {fileID: 9118190561911838095}
   FollowTarget: {fileID: 9118190560055617175}
   adjustY: 1
-  transformAdjustY: 2
+  transformAdjustY: 3
   adjustDistance: 7
   adjustRotation: 2.5
   mayRotate: 1
