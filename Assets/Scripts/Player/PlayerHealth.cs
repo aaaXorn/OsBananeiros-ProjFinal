@@ -12,6 +12,10 @@ public class PlayerHealth : MonoBehaviour
 	//collider do grab, usado em outros scripts pra colisões nesse collider não darem dano no player
 	public BoxCollider GrabCollider;
 	
+	//audio
+	public AudioSource audioS;
+	public AudioClip damageSFX;
+	
 	//vida e vida máxima
 	public int HP, maxHP;
 	
@@ -45,8 +49,12 @@ public class PlayerHealth : MonoBehaviour
 			//da int dmg de dano no jogador até um mínimo de HP == 0
 			for(var i = 0; i < dmg; i++)
 			{
+				//uma vez por ataque tomado
 				if(i == 0)
 				{
+					//faz o SFX de dano
+					audioS.PlayOneShot(damageSFX);
+					//da knockback e stunna o player
 					PM.Knockback(knkb);
 				}
 				

@@ -73,6 +73,7 @@ public class MenuScenes : MonoBehaviour
 	//carrega o segundo stage
 	public void LoadStage2()
 	{
+		SM.S2Checkpoint = false;
 		SM.Save();
 		TS.Transition(false, "Stage2");
 	}

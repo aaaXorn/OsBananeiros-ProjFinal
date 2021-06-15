@@ -14,7 +14,14 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField]
 	TransitionScript TS;
 	
-	Vector3 Movement, VelocityWOY;//direção do movimento
+	//som dos footsteps
+	[SerializeField]
+	AudioSource audioS_loop;
+	//som do pulo
+	[SerializeField]
+	AudioSource audioS_jump;
+	
+	Vector3 Movement, VelocityWOY, Vector3_0;//direção do movimento, Vector3_0 é (0, 0, 0) (para usar em if)
 	public float moveForce, dragForce;//força/velocidade do movimento
 	public float speedLimiterMult, speedLimiterPlus;//limitam a velocidade máxima
 	[SerializeField]
@@ -81,8 +88,17 @@ public class PlayerMovement : MonoBehaviour
 				if(mayJump)
 				{
 					anim.SetTrigger("Jumping");
+					audioS_jump.Play();
 					ChangeState(PlayerState.Jump);
 				}
+			}
+			
+			if(mayJump)
+			{
+				if(!audioS_loop.isPlaying && Movement != Vector3_0)
+					audioS_loop.Play();
+				else if(audioS_loop.isPlaying && Movement == Vector3_0)
+					audioS_loop.Stop();
 			}
 		}
 		//timer de stun, deixa o jogador se mover após 1 segundo

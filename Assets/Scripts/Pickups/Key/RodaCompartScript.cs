@@ -6,25 +6,21 @@ public class RodaCompartScript : MonoBehaviour
 {
 	public GameObject MagnetPrefab;
 	
-	public bool open;
+	public AudioSource audioS;
+	public AudioClip openSFX;
 	
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public bool open;
 	
 	void Screwdriver()
 	{
 		if(!open)
 		{
+			//faz o sfx
+			audioS.PlayOneShot(openSFX);
+			
 			Instantiate(MagnetPrefab, transform.position + new Vector3(0, 0, 2), transform.rotation);
+			
+			open = true;
 		}
 	}
 }

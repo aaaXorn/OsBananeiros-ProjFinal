@@ -47,4 +47,13 @@ PropellerRotation:
 Ligado aos child objects propeller do asset de drone e no prefab FAN. Faz eles rotationarem e pode mudar (ou parar) a velocidade da rotação no meio do jogo se necessário.
 
 SceneTransition:
-Muda a cena usando uma função do TransitionScript.
+Ligado ao collider do final de cada stage. Muda a cena usando uma função do TransitionScript.
+
+StopSpin:
+Ligado a um EmptyGameObject do Stage 2. Quando os dois botões da fase forem pressionados, para o movimento dos ventiladores e desativa seus scripts de dano. Cria um checkpoint quando o jogador aperta o primeiro botão.
+
+DeactivateDmg:
+Ligado aos ventiladores do Stage 2. Desativa o script de dano deles quando recebe a mensagem do StopSpin.
+
+ResetCheckpoint2:
+Ligado ao Stage1End. Reseta o checkpoint do segundo stage.

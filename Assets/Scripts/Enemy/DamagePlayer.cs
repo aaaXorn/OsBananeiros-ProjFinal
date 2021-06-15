@@ -28,11 +28,15 @@ public class DamagePlayer : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-		//se a colisão for do collider principal do player (e não o de grab)
-		if(other.gameObject.CompareTag("Player") && other.collider != PH.GrabCollider)
-			PH.TakeDamage(damage, knockback);
-		
-		if(deleteOnHit)
-			Destroy(gameObject);
+		//pro script não usar essa função desativado
+		if(gameObject.GetComponent<DamagePlayer>().enabled)
+		{
+			//se a colisão for do collider principal do player (e não o de grab)
+			if(other.gameObject.CompareTag("Player") && other.collider != PH.GrabCollider)
+				PH.TakeDamage(damage, knockback);
+			
+			if(deleteOnHit)
+				Destroy(gameObject);
+		}
     }
 }

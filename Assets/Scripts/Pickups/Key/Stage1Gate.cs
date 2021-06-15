@@ -8,6 +8,9 @@ public class Stage1Gate : MonoBehaviour
 	
 	public GameObject Ratoelho, Key;
 	
+	public AudioSource audioS;
+	public AudioClip openSFX;
+	
 	bool open;
 	
 	void Start()
@@ -25,6 +28,9 @@ public class Stage1Gate : MonoBehaviour
 	{
 		if(!open)
 		{
+			//faz o sfx
+			audioS.PlayOneShot(openSFX);
+			
 			//arruma a posição da porta
 			transform.Rotate(0, 0, 90);
 			transform.Translate(1.3f, -0.9f, 0, Space.Self);
