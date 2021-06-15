@@ -24183,7 +24183,7 @@ MonoBehaviour:
   Ratoelho: {fileID: 809737173}
   Key: {fileID: 1034751289}
   audioS: {fileID: 5122119585574484921}
-  openSFX: {fileID: 8300000, guid: 83ca13f6037c4554eb1356eafb48647f, type: 3}
+  openSFX: {fileID: 8300000, guid: 423cf29b15b0ee844a2f7d6f6393e43e, type: 3}
 --- !u!65 &1250611028
 BoxCollider:
   m_ObjectHideFlags: 0
