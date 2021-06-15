@@ -1,7 +1,7 @@
 JOG-MA3 Os Bananeiros
 
 Gabriel Kepecs de Oliveira
-Modelos: Poção, Imã, Bebedouro, Chave de Fenda, Casa da gaiola, Queijo.
+Modelos: Poção, Imã, Bebedouro, Chave de Fenda, Casa da gaiola, Queijo, lápis, prancheta, banco/mesa.
 
 Renan Carr Ribeiro Pesciotto
 Scripts: PlayerCamera, PlayerMovement, ItemGrab, MagnetPickup, Pause, PlayerHealth, DamagePlayer, HealPlayer, KeyActivate, MenuScenes, PauseMenu, Stage1Gate, DroneMovement, TransitionScript, PropellerRotation, SceneTransition.
