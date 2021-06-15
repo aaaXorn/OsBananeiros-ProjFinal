@@ -13,6 +13,12 @@ public class Pause : MonoBehaviour
 	//velocidade do tempo quando o jogo está despausado
     float unpausedTimeScale = 1;
 
+	void Start()
+	{
+		//deixa o cursor invisível
+		Cursor.visible = false;
+	}
+
     void Update()
     {
         if(Input.GetButtonDown("Pause"))
@@ -28,6 +34,9 @@ public class Pause : MonoBehaviour
 	{
 		gamePaused = true;
 		
+		//deixa o cursor visível
+		Cursor.visible = true;
+		
 		PauseMenu.SetActive(true);
 		
 		//faz o tempo na Unity parar, pausando o jogo
@@ -37,6 +46,9 @@ public class Pause : MonoBehaviour
 	void UnpauseGame()
 	{
 		gamePaused = false;
+		
+		//deixa o cursor invisível
+		Cursor.visible = false;
 		
 		PauseMenu.SetActive(false);
 		

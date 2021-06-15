@@ -16,6 +16,9 @@ public class MenuScenes : MonoBehaviour
 	
 	private void Start()
 	{
+		//deixa o cursor visível
+		Cursor.visible = true;
+		
 		SetText();
 	}
 	
