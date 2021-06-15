@@ -15,9 +15,9 @@ Ligado ao objeto PauseGame. Pausa o jogo com Time.timeScale.
 
 PlayerHealth:
 Ligado ao jogador. Tem as funções:
--TakeDamage(int dmg): Da dano no jogador
--RestoreHP(int heal): Cura a vida do jogador
--SetText(): Atualiza o total de vida na UI. Chamado em Start, TakeDamage e RestoreHP
+-TakeDamage(int dmg, float knkb): Da dano no jogador, deixa ele temporariamente imune a dano e usa uma função de PlayerMovement para dar knockback e stun nele.
+-RestoreHP(int heal): Cura a vida do jogador.
+-SetText(): Atualiza o total de vida na UI. Chamado em Start, TakeDamage e RestoreHP.
 
 DamagePlayer:
 Ligado a objetos que dão dano no jogador. Chama TakeDamage se colide com o Player, pode ou não ser deletado quando colide com um objeto.
@@ -44,7 +44,7 @@ TransitionScript:
 Ligado ao objeto GameSystems ou, na Scene Menu, a Buttons. Faz uma transição simples usando uma RawImage preta e variação de transparência.
 
 PropellerRotation:
-Ligado aos child objects propeller do asset de drone. Faz eles rotationarem.
+Ligado aos child objects propeller do asset de drone e no prefab FAN. Faz eles rotationarem e pode mudar (ou parar) a velocidade da rotação no meio do jogo se necessário.
 
 SceneTransition:
 Muda a cena usando uma função do TransitionScript.

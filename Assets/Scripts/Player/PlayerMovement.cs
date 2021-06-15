@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField]
 	bool dying, dead;
 	public float deathTime;
+	//se o jogador não consegue se mover
+	public bool stunned;
+	public float stunTime;
 	
 	//estados do jogador
 	public enum PlayerState
@@ -53,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-		if(!dying)
+		if(!dying && !stunned)
 		{
 			//direção do movimento
 			Movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
@@ -82,11 +85,21 @@ public class PlayerMovement : MonoBehaviour
 				}
 			}
 		}
+		//timer de stun, deixa o jogador se mover após 1 segundo
+		else if(stunned)
+		{
+			stunTime += Time.deltaTime;
+			if(stunTime >= 1)
+			{
+				stunned = false;
+				stunTime = 0;
+			}
+		}
     }
 	
 	void FixedUpdate()
 	{
-		if(!dying)
+		if(!dying && !stunned)
 		{
 			float velocity = rigid.velocity.magnitude;
 			anim.SetFloat("Velocity", velocity);
@@ -99,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
 			//estabiliza o movimento
 			rigid.AddForce(-VelocityWOY * dragForce);
 		}
-		else
+		else if(dying)
 			rigid.velocity = new Vector3(0, rigid.velocity.y, 0);
 	}
 	
@@ -154,6 +167,15 @@ public class PlayerMovement : MonoBehaviour
 				ChangeState(PlayerState.Idle);
 			}
 		}
+	}
+	
+	//jogador jogado para trás, acontece quando toma dano
+	public void Knockback(float force)
+	{
+		stunned = true;
+		
+		//knockback, para trás e um pouco para cima relativo ao jogador
+		rigid.AddRelativeForce(0, force/2, -force);
 	}
 	
 	//jogador morto

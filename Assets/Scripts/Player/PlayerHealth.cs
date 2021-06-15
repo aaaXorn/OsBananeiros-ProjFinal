@@ -15,11 +15,20 @@ public class PlayerHealth : MonoBehaviour
 	//vida e vida máxima
 	public int HP, maxHP;
 	
+	//timer de invulnerabilidade
+	public float invulTimer, maxInvul = 2;
+	
     void Start()
     {
         SetText();
     }
 
+	void Update()
+	{
+		//impede o jogador de tomar muitos hits seguidos
+		if(invulTimer < maxInvul)
+			invulTimer += Time.deltaTime;
+	}
 	
 	void SetText()
 	{
@@ -28,24 +37,36 @@ public class PlayerHealth : MonoBehaviour
 	}
 	
 	//usado quando algo da dano no jogador
-	public void TakeDamage(int dmg)
+	public void TakeDamage(int dmg, float knkb)//knkb é knockback
 	{
-		//da int dmg de dano no jogador até um mínimo de HP == 0
-		for(var i = 0; i < dmg; i++)
+		//se o jogador não estiver invulnerável
+		if(invulTimer >= maxInvul)
 		{
-			if(HP > 1)
-				HP--;
-			else
+			//da int dmg de dano no jogador até um mínimo de HP == 0
+			for(var i = 0; i < dmg; i++)
 			{
-				HP--;
-				i = dmg;
-				//jogador morre
-				PM.ChangeState(PlayerMovement.PlayerState.Dead);
+				if(i == 0)
+				{
+					PM.Knockback(knkb);
+				}
+				
+				if(HP > 1)
+					HP--;
+				else
+				{
+					HP = 0;
+					i = dmg;
+					//jogador morre
+					PM.ChangeState(PlayerMovement.PlayerState.Dead);
+				}
 			}
+			
+			//atualiza o HP na UI
+			SetText();
+			
+			//deixa o jogador temporáriamente invulnerável
+			invulTimer = 0;
 		}
-		
-		//atualiza o HP na UI
-		SetText();
 	}
 	
 	//usado quando algo cura o jogador

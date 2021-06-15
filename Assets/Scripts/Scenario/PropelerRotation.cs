@@ -12,4 +12,9 @@ public class PropelerRotation : MonoBehaviour
 		//faz o objeto rotacionar
         transform.Rotate(0, 0, rotationSpd);
     }
+	
+	public void ChangeRotation(float newSpd)
+	{
+		rotationSpd = newSpd;
+	}
 }

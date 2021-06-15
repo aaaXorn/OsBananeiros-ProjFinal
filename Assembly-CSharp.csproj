@@ -62,8 +62,10 @@
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Menu\SaveManager.cs" />
      <Compile Include="Assets\Scripts\Scenario\PropelerRotation.cs" />
+     <Compile Include="Assets\Scripts\Enemy\ScientistAI.cs" />
      <Compile Include="Assets\Scripts\Pickups\MagnetPull.cs" />
      <Compile Include="Assets\Scripts\Scenario\DroneMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\ScientistHP.cs" />
      <None Include="Assets\Models\Player\manual pro olho funcionar.txt" />
      <None Include="Assets\Sound\SFX\SFX List.txt" />
      <None Include="Assets\_README\programação.txt" />

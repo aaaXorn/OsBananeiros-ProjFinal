@@ -14,18 +14,23 @@ public class DamagePlayer : MonoBehaviour
 	
 	//valor total de dano
 	public int damage;
+	//valor do knockback
+	public float knockback;
 	
     void Start()
     {
         Player = GameObject.FindWithTag("Player");
 		PH = Player.GetComponent<PlayerHealth>();
+		
+		if(knockback == 0)
+			knockback = 750;
     }
 
     void OnCollisionEnter(Collision other)
     {
 		//se a colisão for do collider principal do player (e não o de grab)
 		if(other.gameObject.CompareTag("Player") && other.collider != PH.GrabCollider)
-			PH.TakeDamage(damage);
+			PH.TakeDamage(damage, knockback);
 		
 		if(deleteOnHit)
 			Destroy(gameObject);
