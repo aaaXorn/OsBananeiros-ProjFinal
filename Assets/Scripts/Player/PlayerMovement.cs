@@ -21,9 +21,16 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField]
 	AudioSource audioS_jump;
 	
-	Vector3 Movement, VelocityWOY, Vector3_0;//direção do movimento, Vector3_0 é (0, 0, 0) (para usar em if)
+	Vector3 Movement, Vector3_0;//direção do movimento, Vector3_0 é (0, 0, 0) (para usar em if)
+	
+	/*
+	//variáveis de movimento com AddForce / memorial da minha burrisse
+	Vector3 VelocityWOY;//velocidade sem Y
 	public float moveForce, dragForce;//força/velocidade do movimento
 	public float speedLimiterMult, speedLimiterPlus;//limitam a velocidade máxima
+	*/
+	//variáveis de movimento com velocity
+	public float moveSpeed;
 	[SerializeField]
 	bool grab;//se o jogador está agarrando algo
 	
@@ -120,6 +127,8 @@ public class PlayerMovement : MonoBehaviour
 			float velocity = rigid.velocity.magnitude;
 			anim.SetFloat("Velocity", velocity);
 			
+			/*
+			//movimento com AddForce e continuação do memorial da minha burrisse
 			//movimento e limite de velocidade
 			rigid.AddForce((Movement * moveForce) / (velocity * speedLimiterMult + speedLimiterPlus));
 			
@@ -127,6 +136,9 @@ public class PlayerMovement : MonoBehaviour
 			VelocityWOY = new Vector3(rigid.velocity.x, 0, rigid.velocity.z);
 			//estabiliza o movimento
 			rigid.AddForce(-VelocityWOY * dragForce);
+			*/
+			//movimento com Velocity
+			rigid.velocity = new Vector3(Movement.x * moveSpeed, rigid.velocity.y, Movement.z * moveSpeed);
 		}
 		else if(dying)
 			rigid.velocity = new Vector3(0, rigid.velocity.y, 0);
