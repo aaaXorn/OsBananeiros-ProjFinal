@@ -16,6 +16,8 @@ public class DamagePlayer : MonoBehaviour
 	public int damage;
 	//valor do knockback
 	public float knockback;
+	//se ignora invulnerabilidade ou não
+	public bool invulIgnore;
 	
     void Start()
     {
@@ -33,7 +35,7 @@ public class DamagePlayer : MonoBehaviour
 		{
 			//se a colisão for do collider principal do player (e não o de grab)
 			if(other.gameObject.CompareTag("Player") && other.collider != PH.GrabCollider)
-				PH.TakeDamage(damage, knockback);
+				PH.TakeDamage(damage, invulIgnore, knockback);
 			
 			if(deleteOnHit)
 				Destroy(gameObject);

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2251,6 +2251,7 @@ MonoBehaviour:
   deleteOnHit: 0
   damage: 3
   knockback: 0
+  invulIgnore: 0
 --- !u!64 &101845051
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17691,6 +17692,7 @@ MonoBehaviour:
   deleteOnHit: 0
   damage: 3
   knockback: 0
+  invulIgnore: 0
 --- !u!64 &923375451
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27784,6 +27786,7 @@ MonoBehaviour:
   deleteOnHit: 0
   damage: 999
   knockback: 0
+  invulIgnore: 1
 --- !u!65 &1488292003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32421,6 +32424,7 @@ MonoBehaviour:
   deleteOnHit: 0
   damage: 3
   knockback: 0
+  invulIgnore: 0
 --- !u!64 &1735416012
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -38029,6 +38033,7 @@ MonoBehaviour:
   deleteOnHit: 0
   damage: 3
   knockback: 0
+  invulIgnore: 0
 --- !u!64 &2046298777
 MeshCollider:
   m_ObjectHideFlags: 0

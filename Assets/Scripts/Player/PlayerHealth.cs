@@ -41,10 +41,10 @@ public class PlayerHealth : MonoBehaviour
 	}
 	
 	//usado quando algo da dano no jogador
-	public void TakeDamage(int dmg, float knkb)//knkb é knockback
+	public void TakeDamage(int dmg, bool ignInvul, float knkb)//ignInvul é se ignora invulnerabilidade, knkb é knockback
 	{
 		//se o jogador não estiver invulnerável
-		if(invulTimer >= maxInvul)
+		if(invulTimer >= maxInvul || ignInvul)
 		{
 			//da int dmg de dano no jogador até um mínimo de HP == 0
 			for(var i = 0; i < dmg; i++)
