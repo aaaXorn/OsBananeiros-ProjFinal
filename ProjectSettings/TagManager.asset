@@ -7,6 +7,8 @@ TagManager:
   - Pickup
   - Gate
   - Chest
+  - Chase
+  - StopChase
   layers:
   - Default
   - TransparentFX

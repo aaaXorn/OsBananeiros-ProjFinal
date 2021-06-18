@@ -35,7 +35,7 @@ PauseMenu:
 Ligado ao objeto GameSystems. Similar ao MenuScenes, mas com os textos e voids dos botões do menu de pause.
 
 Stage1Gate:
-Ligado a porta da gaiola do Stage 1. Abre a porta muda a posição e rotação dela quando colide com a chave. Quando a porta abre, ativa um checkpoint pro jogador.
+Ligado à porta da gaiola do Stage 1. Abre a porta muda a posição e rotação dela quando colide com a chave. Quando a porta abre, ativa um checkpoint pro jogador.
 
 DroneMovement:
 Ligado ao drone do Stage 1. Faz ele se mover em uma elipse (ou círculo) e se rotacionar para a face certa apontar para o centro da curva.
@@ -57,3 +57,12 @@ Ligado aos ventiladores do Stage 2. Desativa o script de dano deles quando receb
 
 ResetCheckpoint2:
 Ligado ao Stage1End. Reseta o checkpoint do segundo stage.
+
+TopDownCamera:
+Ligado à câmera do Stage 3. Uma versão da câmera que não rotaciona com o player e o observa por cima.
+
+S3Chase:
+Ligado aos objetos de escuridão do Stage 3. Faz eles avançarem em uma direção específica. O movimento é ativado quando um desses objetos toca no outro (que tem a tag "Chase") (com ou sem delay), e é desativado quando toca em um objeto com a tag "StopChase".
+
+AutoSpike:
+Ligado aos parentObjects de espinho. Cria um raycast que, quando o jogador passa por cima, ativa o movimento do childObject de espinho, fazendo ele ir para frente e depois voltar pra posição original. Tem um cooldown.

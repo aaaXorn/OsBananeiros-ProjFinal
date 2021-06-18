@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastStartPoint: 1.25
-  raycastSize: 15
+  raycastSize: 17
   pullForce: 0.5
 --- !u!65 &349755153272740771
 BoxCollider:
