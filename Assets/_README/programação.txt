@@ -11,7 +11,7 @@ MagnetPull:
 Ligado ao pickup de imã. Cria um raycast usado para aplicar força em outros pickups, puxando eles.
 
 Pause:
-Ligado ao objeto PauseGame. Pausa o jogo com Time.timeScale.
+Ligado ao objeto GameSystems. Pausa o jogo com Time.timeScale e da enable no menu de pause ou, com o LoreTrigger, da enable no sprite da prancheta com texto.
 
 PlayerHealth:
 Ligado ao jogador. Tem as funções:
@@ -32,7 +32,7 @@ MenuScenes:
 Ligado ao objeto Buttons da Scene Menu. Deixa o texto na língua certa e contém os voids dos botões do main menu.
 
 PauseMenu:
-Ligado ao objeto GameSystems. Similar ao MenuScenes, mas com os textos e voids dos botões do menu de pause.
+Ligado ao objeto PauseObj. Similar ao MenuScenes, mas com os textos e voids dos botões do menu de pause.
 
 Stage1Gate:
 Ligado à porta da gaiola do Stage 1. Abre a porta muda a posição e rotação dela quando colide com a chave. Quando a porta abre, ativa um checkpoint pro jogador.
@@ -66,3 +66,6 @@ Ligado aos objetos de escuridão do Stage 3. Faz eles avançarem em uma direçã
 
 AutoSpike:
 Ligado aos parentObjects de espinho. Cria um raycast que, quando o jogador passa por cima, ativa o movimento do childObject de espinho, fazendo ele ir para frente e depois voltar pra posição original. Tem um cooldown.
+
+LoreTrigger:
+Ligado às pranchetas. Quando o jogador aperta o botão de interagir enquanto dentro do trigger, pausa o jogo e abre um sprite de prancheta com texto.

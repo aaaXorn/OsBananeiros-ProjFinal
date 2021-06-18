@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
 	public SaveManager SM;
 	public TransitionScript TS;
 	//textos, mudam de acordo com a lingua escolhida pelo jogador
-	public Text txtQuitMenu, txtQuitGame;
+	public Text txtQuitMenu, txtQuitGame, txtLore;
 	
 	private void Awake()
 	{
@@ -45,5 +45,10 @@ public class PauseMenu : MonoBehaviour
 	{
 		SM.Save();
 		Application.Quit();
+	}
+	
+	public void ChangeLoreTxt(string loreTxt)
+	{
+		txtLore.text = loreTxt;
 	}
 }

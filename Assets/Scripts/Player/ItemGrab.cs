@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ItemGrab : MonoBehaviour
 {
+	public Pause pScript;
+	
 	public GameObject GrabbedItem;
 	public BoxCollider boxC;
 	
 	bool grabbing;//se o jogador está segurando um item
-	bool grabInput;//igual ao Input "Interact", pra poder usar no TriggerStay
+	public bool grabInput;//igual ao Input "Interact", pra poder usar no TriggerStay
 	float grabTimer, grabCD = 1;//cooldown do grab, para evitar bugs
 
     void Update()

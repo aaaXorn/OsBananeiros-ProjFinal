@@ -5,10 +5,13 @@ using UnityEngine;
 public class Pause : MonoBehaviour
 {
 	[SerializeField]
-	GameObject PauseMenu;
+	GameObject PauseMenu, Clipboard;
 	
 	//se o jogo está ou não pausado, usado em partes de outros códigos pro pause funcionar
 	public bool gamePaused = false;
+	
+	//se o pause foi causado por um item de prancheta ou não
+	public bool clipboard;
 	
 	//velocidade do tempo quando o jogo está despausado
     float unpausedTimeScale = 1;
@@ -23,6 +26,8 @@ public class Pause : MonoBehaviour
     {
         if(Input.GetButtonDown("Pause"))
 		{
+			clipboard = false;
+			
 			if(!gamePaused)
 				PauseGame();
 			else
@@ -50,9 +55,25 @@ public class Pause : MonoBehaviour
 		//deixa o cursor invisível
 		Cursor.visible = false;
 		
-		PauseMenu.SetActive(false);
+		if(PauseMenu.activeSelf)
+			PauseMenu.SetActive(false);
+		if(Clipboard.activeSelf)
+			Clipboard.SetActive(false);
 		
 		//volta o tempo ao normal, despausando o jogo
 		Time.timeScale = unpausedTimeScale;
+	}
+	
+	public void ClipboardPause()
+	{
+		gamePaused = true;
+		
+		//deixa o cursor visível
+		Cursor.visible = true;
+		
+		Clipboard.SetActive(true);
+		
+		//faz o tempo na Unity parar, pausando o jogo
+		Time.timeScale = 0;
 	}
 }
