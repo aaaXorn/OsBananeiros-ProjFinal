@@ -444,6 +444,9 @@ MonoBehaviour:
   FollowTarget: {fileID: 397116460}
   adjustDistance: 13
   adjustX: 10
+  rotate: 0
+  rotTimer: 3
+  rotSpeed: 20
 --- !u!1 &397116460 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9118190560055617175, guid: 27c5ab9dc9422a448aa12dc17537b62e, type: 3}

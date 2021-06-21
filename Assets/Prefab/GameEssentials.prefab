@@ -4050,7 +4050,7 @@ MonoBehaviour:
   adjustY: 1
   transformAdjustY: 3
   adjustDistance: 7
-  adjustRotation: 2.5
+  adjustRotation: 400
   mayRotate: 1
 --- !u!20 &9118190560041279020
 Camera:

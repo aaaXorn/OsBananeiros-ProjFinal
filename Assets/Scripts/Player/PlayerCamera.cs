@@ -34,12 +34,8 @@ public class PlayerCamera : MonoBehaviour
 			//rotaciona a câmera baseado no CameraDummy
 			transform.LookAt(FollowTarget.transform.position + Vector3.up * adjustY);
 			
-			//para não rotacionar a câmera quando o jogo está pausado
-			if(!pause.gamePaused)
-			{
-				//rotaciona o CameraDummy, causando uma rotação na câmera
-				CameraDummy.transform.Rotate(0, Input.GetAxis("Mouse X") * adjustRotation, 0);
-			}
+			//rotaciona o CameraDummy, causando uma rotação na câmera
+			CameraDummy.transform.Rotate(0, Input.GetAxis("Mouse X") * adjustRotation * Time.deltaTime, 0);
 		}
     }
 }

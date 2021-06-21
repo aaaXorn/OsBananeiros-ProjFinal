@@ -10,6 +10,13 @@ public class TopDownCamera : MonoBehaviour
 	//variáveis que mudam o comportamento da câmera
 	public float adjustDistance, adjustX;
 	
+	//se é pra câmera rotacionar
+	public bool rotate;
+	//timer da rotação
+	public float rotTimer;
+	//velocidade da rotação
+	public float rotSpeed;
+	
     void Start()
     {
 		//cria um objeto para a câmera seguir
@@ -27,5 +34,25 @@ public class TopDownCamera : MonoBehaviour
 		
 		//rotaciona a câmera para ela olhar pro player
 		transform.LookAt(FollowTarget.transform.position);
+		
+		if(rotate)
+		{
+			if(rotTimer > 0)
+			{
+				//rotaciona o CameraDummy, causando uma rotação na câmera
+				CameraDummy.transform.Rotate(0, rotSpeed * Time.deltaTime, 0);
+				
+				rotTimer -= Time.deltaTime;
+			}
+			else
+				rotate = false;
+		}
     }
+	
+	void RotateCamera(float timer, float spd)
+	{
+		rotate = true;
+		rotTimer = timer;
+		rotSpeed = spd;//>0 pra esquerda, <0 pra direita
+	}
 }

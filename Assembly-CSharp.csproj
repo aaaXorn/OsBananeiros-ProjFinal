@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Pickups\Key\Stage1Gate.cs" />
      <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\UI\LoreTrigger.cs" />
      <Compile Include="Assets\Scripts\Scenario\Stage2Button.cs" />
      <Compile Include="Assets\Scripts\Pickups\Key\RodaCompartScript.cs" />
      <Compile Include="Assets\Scripts\Pickups\Key\KeyActivate.cs" />
