@@ -22,9 +22,22 @@ public class PlayerHealth : MonoBehaviour
 	//timer de invulnerabilidade
 	public float invulTimer, maxInvul = 2;
 	
+	//sprites do UI
+	/*Image prefabHP
+	Stack<Image> healthSpr
+	//variáveis de posicionamento dos sprites
+	float sprPosMult, sprPosAdd, sprPosAddInst;
+	*/
+	
     void Start()
     {
         SetText();
+		/*healthSpr = new Stack<Image>();
+		for(int i = 0; i < HP; i++)
+		{
+			AddSpr();
+		}
+		*/
     }
 
 	void Update()
@@ -59,7 +72,10 @@ public class PlayerHealth : MonoBehaviour
 				}
 				
 				if(HP > 1)
+				{
 					HP--;
+					//RemoveSpr();
+				}
 				else
 				{
 					HP = 0;
@@ -84,7 +100,10 @@ public class PlayerHealth : MonoBehaviour
 		for(var i = 0; i < heal; i++)
 		{
 			if(HP < maxHP)
+			{
 				HP++;
+				//AddSpr();
+			}
 			else
 				i = heal;
 		}
@@ -92,4 +111,20 @@ public class PlayerHealth : MonoBehaviour
 		//atualiza o HP na UI
 		SetText();
 	}
+	
+	/*
+	public void RemoveSpr()
+	{
+		Image img = healthSpr.Pop();
+		if(img) Destroy(img);
+	}
+	
+	public void AddSpr()
+	{
+		float posX = prefabHP.rectTransform.sizeDelta.x * healthSpr.count * sprPosMult + sprPosAdd;
+		healthSpr.Push(
+					   Instantiate(prefabHP, transform.position + new Vector3(posX - sprPosAddInst), Quaternion.identity, gameObject.transform)
+					  );
+	}
+	*/
 }
