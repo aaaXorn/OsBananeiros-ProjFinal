@@ -11,13 +11,13 @@ MagnetPull:
 Ligado ao pickup de imã. Cria um raycast usado para aplicar força em outros pickups, puxando eles.
 
 Pause:
-Ligado ao objeto PauseGame. Pausa o jogo com Time.timeScale.
+Ligado ao objeto GameSystems. Pausa o jogo com Time.timeScale e da enable no menu de pause ou, com o LoreTrigger, da enable no sprite da prancheta com texto.
 
 PlayerHealth:
 Ligado ao jogador. Tem as funções:
--TakeDamage(int dmg): Da dano no jogador
--RestoreHP(int heal): Cura a vida do jogador
--SetText(): Atualiza o total de vida na UI. Chamado em Start, TakeDamage e RestoreHP
+-TakeDamage(int dmg, float knkb): Da dano no jogador, deixa ele temporariamente imune a dano e usa uma função de PlayerMovement para dar knockback e stun nele.
+-RestoreHP(int heal): Cura a vida do jogador.
+-SetText(): Atualiza o total de vida na UI. Chamado em Start, TakeDamage e RestoreHP.
 
 DamagePlayer:
 Ligado a objetos que dão dano no jogador. Chama TakeDamage se colide com o Player, pode ou não ser deletado quando colide com um objeto.
@@ -32,4 +32,40 @@ MenuScenes:
 Ligado ao objeto Buttons da Scene Menu. Deixa o texto na língua certa e contém os voids dos botões do main menu.
 
 PauseMenu:
-ligado ao objeto MenuPause. Similar ao MenuScenes, mas com os textos e voids dos botões do menu de pause.
+Ligado ao objeto PauseObj. Similar ao MenuScenes, mas com os textos e voids dos botões do menu de pause.
+
+Stage1Gate:
+Ligado à porta da gaiola do Stage 1. Abre a porta muda a posição e rotação dela quando colide com a chave. Quando a porta abre, ativa um checkpoint pro jogador.
+
+DroneMovement:
+Ligado ao drone do Stage 1. Faz ele se mover em uma elipse (ou círculo) e se rotacionar para a face certa apontar para o centro da curva.
+
+TransitionScript:
+Ligado ao objeto GameSystems ou, na Scene Menu, a Buttons. Faz uma transição simples usando uma RawImage preta e variação de transparência.
+
+PropellerRotation:
+Ligado aos child objects propeller do asset de drone e no prefab FAN. Faz eles rotationarem e pode mudar (ou parar) a velocidade da rotação no meio do jogo se necessário.
+
+SceneTransition:
+Ligado ao collider do final de cada stage. Muda a cena usando uma função do TransitionScript.
+
+StopSpin:
+Ligado a um EmptyGameObject do Stage 2. Quando os dois botões da fase forem pressionados, para o movimento dos ventiladores e desativa seus scripts de dano. Cria um checkpoint quando o jogador aperta o primeiro botão.
+
+DeactivateDmg:
+Ligado aos ventiladores do Stage 2. Desativa o script de dano deles quando recebe a mensagem do StopSpin.
+
+ResetCheckpoint2:
+Ligado ao Stage1End. Reseta o checkpoint do segundo stage.
+
+TopDownCamera:
+Ligado à câmera do Stage 3. Uma versão da câmera que não rotaciona com o player e o observa por cima.
+
+S3Chase:
+Ligado aos objetos de escuridão do Stage 3. Faz eles avançarem em uma direção específica. O movimento é ativado quando um desses objetos toca no outro (que tem a tag "Chase") (com ou sem delay), e é desativado quando toca em um objeto com a tag "StopChase".
+
+AutoSpike:
+Ligado aos parentObjects de espinho. Cria um raycast que, quando o jogador passa por cima, ativa o movimento do childObject de espinho, fazendo ele ir para frente e depois voltar pra posição original. Tem um cooldown.
+
+LoreTrigger:
+Ligado às pranchetas. Quando o jogador aperta o botão de interagir enquanto dentro do trigger, pausa o jogo e abre um sprite de prancheta com texto.

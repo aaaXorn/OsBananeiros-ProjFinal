@@ -1,13 +1,15 @@
 JOG-MA3 Os Bananeiros
 
 Gabriel Kepecs de Oliveira
-Modelos: Poção, Imã, Bebedouro, Chave de Fenda.
+Modelos: Poção, Imã, Bebedouro, Chave de Fenda, Casa da gaiola, Queijo, lápis, prancheta, banco/mesa.
 
 Renan Carr Ribeiro Pesciotto
-Scripts: PlayerCamera, PlayerMovement, ItemGrab, MagnetPickup, Pause, PlayerHealth, DamagePlayer, HealPlayer, KeyActivate, MenuScenes, PauseMenu.
+Scripts: PlayerCamera, PlayerMovement, ItemGrab, MagnetPickup, Pause, PlayerHealth, DamagePlayer, HealPlayer, KeyActivate, MenuScenes, PauseMenu, Stage1Gate, DroneMovement, TransitionScript, PropellerRotation, SceneTransition, StopSpin, Stage2Button, DeactivateDmg, ResetCheckpoint2, TopDownCamera, S3Chase, AutoSpike, LoreTrigger.
 
 Victor Hugo Teixeira Pontes
 Modelos: Roda de exercícios.
+Sons: Musica Base e Drum solo, passos, moeda, pulo, chave, hit, queda e movimento, interação de menu
+UI: Main Menu, Paude sprite, Health Sprite
 
 Thomas Mandel Nunes Cavallini
 Modelos: Ratoelho.

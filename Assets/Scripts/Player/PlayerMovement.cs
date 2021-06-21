@@ -11,10 +11,26 @@ public class PlayerMovement : MonoBehaviour
 	GameObject CameraDummy;
 	[SerializeField]
 	Pause pause;
+	[SerializeField]
+	TransitionScript TS;
 	
-	Vector3 Movement, VelocityWOY;//direção do movimento
+	//som dos footsteps
+	[SerializeField]
+	AudioSource audioS_loop;
+	//som do pulo
+	[SerializeField]
+	AudioSource audioS_jump;
+	
+	Vector3 Movement, Vector3_0;//direção do movimento, Vector3_0 é (0, 0, 0) (para usar em if)
+	
+	/*
+	//variáveis de movimento com AddForce / memorial da minha burrisse
+	Vector3 VelocityWOY;//velocidade sem Y
 	public float moveForce, dragForce;//força/velocidade do movimento
 	public float speedLimiterMult, speedLimiterPlus;//limitam a velocidade máxima
+	*/
+	//variáveis de movimento com velocity
+	public float moveSpeed;
 	[SerializeField]
 	bool grab;//se o jogador está agarrando algo
 	
@@ -27,6 +43,9 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField]
 	bool dying, dead;
 	public float deathTime;
+	//se o jogador não consegue se mover
+	public bool stunned;
+	public float stunTime;
 	
 	//estados do jogador
 	public enum PlayerState
@@ -51,10 +70,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-		if(!dying)
+		if(!dying && !stunned)
 		{
 			//direção do movimento
-			Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+			Movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
 			//faz a direção do movimento ser baseada na rotação da camera
 			if(CameraDummy) Movement = CameraDummy.transform.TransformDirection(Movement);
 			
@@ -76,19 +95,40 @@ public class PlayerMovement : MonoBehaviour
 				if(mayJump)
 				{
 					anim.SetTrigger("Jumping");
+					audioS_jump.Play();
 					ChangeState(PlayerState.Jump);
 				}
+			}
+			
+			if(mayJump)
+			{
+				if(!audioS_loop.isPlaying && Movement != Vector3_0)
+					audioS_loop.Play();
+				else if(audioS_loop.isPlaying && Movement == Vector3_0)
+					audioS_loop.Stop();
+			}
+		}
+		//timer de stun, deixa o jogador se mover após 1 segundo
+		else if(stunned)
+		{
+			stunTime += Time.deltaTime;
+			if(stunTime >= 1)
+			{
+				stunned = false;
+				stunTime = 0;
 			}
 		}
     }
 	
 	void FixedUpdate()
 	{
-		if(!dying)
+		if(!dying && !stunned)
 		{
 			float velocity = rigid.velocity.magnitude;
 			anim.SetFloat("Velocity", velocity);
 			
+			/*
+			//movimento com AddForce e continuação do memorial da minha burrisse
 			//movimento e limite de velocidade
 			rigid.AddForce((Movement * moveForce) / (velocity * speedLimiterMult + speedLimiterPlus));
 			
@@ -96,7 +136,12 @@ public class PlayerMovement : MonoBehaviour
 			VelocityWOY = new Vector3(rigid.velocity.x, 0, rigid.velocity.z);
 			//estabiliza o movimento
 			rigid.AddForce(-VelocityWOY * dragForce);
+			*/
+			//movimento com Velocity
+			rigid.velocity = new Vector3(Movement.x * moveSpeed, rigid.velocity.y, Movement.z * moveSpeed);
 		}
+		else if(dying)
+			rigid.velocity = new Vector3(0, rigid.velocity.y, 0);
 	}
 	
 	//função para facilitar a mudança de estados
@@ -152,11 +197,20 @@ public class PlayerMovement : MonoBehaviour
 		}
 	}
 	
+	//jogador jogado para trás, acontece quando toma dano
+	public void Knockback(float force)
+	{
+		stunned = true;
+		
+		//knockback, para trás e um pouco para cima relativo ao jogador
+		rigid.AddRelativeForce(0, force/2, -force);
+	}
+	
 	//jogador morto
 	IEnumerator Dead()
 	{
 		dying = true;
 		yield return new WaitForSeconds(deathTime);
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		TS.Transition(false, SceneManager.GetActiveScene().name);
 	}
 }

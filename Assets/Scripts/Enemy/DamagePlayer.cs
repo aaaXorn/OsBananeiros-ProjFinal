@@ -14,19 +14,31 @@ public class DamagePlayer : MonoBehaviour
 	
 	//valor total de dano
 	public int damage;
+	//valor do knockback
+	public float knockback;
+	//se ignora invulnerabilidade ou não
+	public bool invulIgnore;
 	
     void Start()
     {
         Player = GameObject.FindWithTag("Player");
 		PH = Player.GetComponent<PlayerHealth>();
+		
+		if(knockback == 0)
+			knockback = 750;
     }
 
     void OnCollisionEnter(Collision other)
     {
-		if(other.gameObject.CompareTag("Player"))
-			PH.TakeDamage(damage);
-		
-		if(deleteOnHit)
-			Destroy(gameObject);
+		//pro script não usar essa função desativado
+		if(gameObject.GetComponent<DamagePlayer>().enabled)
+		{
+			//se a colisão for do collider principal do player (e não o de grab)
+			if(other.gameObject.CompareTag("Player") && other.collider != PH.GrabCollider)
+				PH.TakeDamage(damage, invulIgnore, knockback);
+			
+			if(deleteOnHit)
+				Destroy(gameObject);
+		}
     }
 }
