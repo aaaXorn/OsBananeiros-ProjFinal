@@ -53,6 +53,7 @@ public class MenuScenes : MonoBehaviour
 	{
 		SM.S1Checkpoint = false;
 		SM.S2Checkpoint = false;
+		SM.S3Checkpoints = 0;
 		SM.CurrentStage = "Stage1";
 		SM.Score = 0;
 		SM.Save();

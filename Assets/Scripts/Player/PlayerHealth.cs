@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
 	public float invulTimer, maxInvul = 2;
 	
 	//sprites do UI
-	public Transform transfHP;
+	public RectTransform transfHP;
 	public Image prefabHP;
 	//array de imagens
 	Stack<Image> healthSpr;
@@ -124,7 +124,7 @@ public class PlayerHealth : MonoBehaviour
 	public void AddSpr()
 	{
 		//cria um novo Image no Array
-		float posX = prefabHP.rectTransform.sizeDelta.x * healthSpr.Count * sprPosMult + sprPosAdd;
+		float posX = (prefabHP.rectTransform.sizeDelta.x * healthSpr.Count * sprPosMult + sprPosAdd) * Screen.width/1150;
 		healthSpr.Push(
 					   Instantiate(prefabHP, transfHP.position + new Vector3((posX - sprPosAddInst), 0, 0),
 								   Quaternion.identity, transfHP)

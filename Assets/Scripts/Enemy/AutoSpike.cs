@@ -17,17 +17,18 @@ public class AutoSpike : MonoBehaviour
 	
 	
 	//onde o raycast começa, seu tamanho
-	[SerializeField]
-	float raycastStartPoint, raycastSize;
+	//[SerializeField]
+	//float raycastStartPoint, raycastSize;
 	
 	//informação do que o raycast acertou
-	RaycastHit hitInfo;
+	//RaycastHit hitInfo;
 	
 
     // Update is called once per frame
     void Update()
     {
-        //para visualizar o raycast
+        /*
+		//para visualizar o raycast
 		Debug.DrawLine(transform.position + (transform.forward * raycastStartPoint), transform.position + (transform.forward * raycastSize), Color.white);
 		//gera o raycast
 		Physics.Raycast(transform.position + (transform.forward * raycastStartPoint), transform.forward, out hitInfo, raycastSize);
@@ -35,24 +36,24 @@ public class AutoSpike : MonoBehaviour
 		//para impedir erros
 		if(hitInfo.collider != null)
 		{
-			//se o raycast acertar um pickup
+			//se o raycast acertar o player
 			if(hitInfo.collider.tag == "Player")
 			{
 				activate = true;
 			}
-		}
+		}*/
 		
 		if(activate)
 		{
 			if(spikeTimer < maxTimer/2)
 			{
-				Spike.transform.Translate(Direction * speed * Time.deltaTime);
+				Spike.transform.Translate(Direction * speed * Time.deltaTime, Space.World);
 				
 				spikeTimer += Time.deltaTime;
 			}
 			else if(spikeTimer >= maxTimer/2 && spikeTimer < maxTimer)
 			{
-				Spike.transform.Translate(Direction * -speed * Time.deltaTime);
+				Spike.transform.Translate(Direction * -speed * Time.deltaTime, Space.World);
 				
 				spikeTimer += Time.deltaTime;
 			}
@@ -68,4 +69,13 @@ public class AutoSpike : MonoBehaviour
 			}
 		}
     }
+	
+	void OnTriggerEnter(Collider other)
+	{
+		//se for o player
+		if(other.gameObject.CompareTag("Player"))
+		{
+			activate = true;
+		}
+	}
 }

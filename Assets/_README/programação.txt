@@ -66,7 +66,7 @@ S3Chase:
 Ligado aos objetos de escuridão do Stage 3. Faz eles avançarem em uma direção específica. O movimento é ativado quando um desses objetos toca no outro (que tem a tag "Chase") (com ou sem delay), e é desativado quando toca em um objeto com a tag "StopChase".
 
 AutoSpike:
-Ligado aos parentObjects de espinho. Cria um raycast que, quando o jogador passa por cima, ativa o movimento do childObject de espinho, fazendo ele ir para frente e depois voltar pra posição original. Tem um cooldown.
+Ligado aos parentObjects de espinho. Tem um trigger que, quando o jogador passa por cima, ativa o movimento do childObject de espinho, fazendo ele ir para frente e depois voltar pra posição original. Tem um cooldown.
 
 LoreTrigger:
 Ligado às pranchetas. Quando o jogador aperta o botão de interagir enquanto dentro do trigger, pausa o jogo e abre um sprite de prancheta com texto.
@@ -79,3 +79,9 @@ Ligado a triggers espalhados pelo Stage 3. Ativa a função RotateCamera de TopD
 
 SaveManager:
 Feito com base no SaveManager mostrado durante a aula. É usado para salvar e loadar o jogo.
+
+S3Checkpoints:
+Quando colidem com o jogador, aumentam o valor de SaveManager.S3Checkpoints, que é usado em S3CheckpointSpawn. Se o checkpoint já tiver sido usado, o trigger dele é deletado.
+
+S3CheckpointSpawn:
+Checa quantos checkpoints do Stage 3 foram pegos e spawna o jogador no local certo.

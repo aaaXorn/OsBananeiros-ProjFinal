@@ -16,6 +16,7 @@ public class SaveManager : MonoBehaviour
 	public bool S2Checkpoint;
 	public int Score;
 	public int HighScore;
+	public int S3Checkpoints;
 
     private void Awake()
     {
@@ -45,6 +46,7 @@ public class SaveManager : MonoBehaviour
 			S2Checkpoint = data.S2Checkpoint;
 			Score = data.Score;
 			HighScore = data.HighScore;
+			S3Checkpoints = data.S3Checkpoints;
 
             file.Close();
         }
@@ -63,6 +65,7 @@ public class SaveManager : MonoBehaviour
 		data.S2Checkpoint = S2Checkpoint;
 		data.Score = Score;
 		data.HighScore = HighScore;
+		data.S3Checkpoints = S3Checkpoints;
 		
         bf.Serialize(file, data);
         file.Close();
@@ -80,4 +83,5 @@ class PlayerData_Storage
 	public bool S2Checkpoint;
 	public int Score;
 	public int HighScore;
+	public int S3Checkpoints;
 }

@@ -63,10 +63,12 @@
      <Compile Include="Assets\Scripts\Pickups\Key\KeyActivate.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuScenes.cs" />
      <Compile Include="Assets\Scripts\Pickups\HealPlayer.cs" />
+     <Compile Include="Assets\Scripts\UI\Score.cs" />
      <Compile Include="Assets\Scripts\Scenario\Scenes\ResetCheckpoint2.cs" />
      <Compile Include="Assets\Scripts\Menu\TransitionScript.cs" />
      <Compile Include="Assets\Scripts\Scenario\Scenes\SceneTransition.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\UI\RotCamTrigger.cs" />
      <Compile Include="Assets\Scripts\Scenario\StopSpin.cs" />
      <Compile Include="Assets\Scripts\Menu\SaveManager.cs" />
      <Compile Include="Assets\Scripts\Scenario\PropelerRotation.cs" />
