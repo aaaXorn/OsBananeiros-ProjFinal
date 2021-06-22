@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a959391357c989144ac665fdf506a054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SM: {fileID: 1556504895}
   TS: {fileID: 197360951}
   unused: 1
   StageToLoad: Stage3

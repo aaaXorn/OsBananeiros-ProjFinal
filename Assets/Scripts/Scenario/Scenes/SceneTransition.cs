@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SceneTransition : MonoBehaviour
 {
+	public SaveManager SM;
+	
     public TransitionScript TS;
 	[SerializeField]
 	bool unused = true;
@@ -15,6 +17,7 @@ public class SceneTransition : MonoBehaviour
 		{
 			unused = false;
 			
+			SM.CurrentStage = StageToLoad;
 			TS.Transition(false, StageToLoad);
 		}
     }

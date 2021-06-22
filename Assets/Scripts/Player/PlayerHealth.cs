@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 	//texto que mostra o total de HP no UI
-	public Text txt;
+	//public Text txt;
 	//script de PlayerMovement
 	public PlayerMovement PM;
 	//collider do grab, usado em outros scripts pra colisões nesse collider não darem dano no player
@@ -23,21 +23,22 @@ public class PlayerHealth : MonoBehaviour
 	public float invulTimer, maxInvul = 2;
 	
 	//sprites do UI
-	/*Image prefabHP
-	Stack<Image> healthSpr
+	public Transform transfHP;
+	public Image prefabHP;
+	//array de imagens
+	Stack<Image> healthSpr;
 	//variáveis de posicionamento dos sprites
-	float sprPosMult, sprPosAdd, sprPosAddInst;
-	*/
+	public float sprPosMult, sprPosAdd, sprPosAddInst;
 	
     void Start()
     {
-        SetText();
-		/*healthSpr = new Stack<Image>();
+        //SetText();
+		//cria o array de imagens
+		healthSpr = new Stack<Image>();
 		for(int i = 0; i < HP; i++)
 		{
 			AddSpr();
 		}
-		*/
     }
 
 	void Update()
@@ -47,11 +48,11 @@ public class PlayerHealth : MonoBehaviour
 			invulTimer += Time.deltaTime;
 	}
 	
-	void SetText()
+	/*void SetText()
 	{
 		//string text é "HP: " seguido de int HP como string
 		txt.text = "HP: " + HP;
-	}
+	}*/
 	
 	//usado quando algo da dano no jogador
 	public void TakeDamage(int dmg, bool ignInvul, float knkb)//ignInvul é se ignora invulnerabilidade, knkb é knockback
@@ -74,11 +75,12 @@ public class PlayerHealth : MonoBehaviour
 				if(HP > 1)
 				{
 					HP--;
-					//RemoveSpr();
+					RemoveSpr();
 				}
 				else
 				{
 					HP = 0;
+					RemoveSpr();
 					i = dmg;
 					//jogador morre
 					PM.ChangeState(PlayerMovement.PlayerState.Dead);
@@ -86,7 +88,7 @@ public class PlayerHealth : MonoBehaviour
 			}
 			
 			//atualiza o HP na UI
-			SetText();
+			//SetText();
 			
 			//deixa o jogador temporáriamente invulnerável
 			invulTimer = 0;
@@ -102,29 +104,30 @@ public class PlayerHealth : MonoBehaviour
 			if(HP < maxHP)
 			{
 				HP++;
-				//AddSpr();
+				AddSpr();
 			}
 			else
 				i = heal;
 		}
 		
 		//atualiza o HP na UI
-		SetText();
+		//SetText();
 	}
 	
-	/*
 	public void RemoveSpr()
 	{
+		//destroi o último Image do Array
 		Image img = healthSpr.Pop();
 		if(img) Destroy(img);
 	}
 	
 	public void AddSpr()
 	{
-		float posX = prefabHP.rectTransform.sizeDelta.x * healthSpr.count * sprPosMult + sprPosAdd;
+		//cria um novo Image no Array
+		float posX = prefabHP.rectTransform.sizeDelta.x * healthSpr.Count * sprPosMult + sprPosAdd;
 		healthSpr.Push(
-					   Instantiate(prefabHP, transform.position + new Vector3(posX - sprPosAddInst), Quaternion.identity, gameObject.transform)
+					   Instantiate(prefabHP, transfHP.position + new Vector3((posX - sprPosAddInst), 0, 0),
+								   Quaternion.identity, transfHP)
 					  );
 	}
-	*/
 }

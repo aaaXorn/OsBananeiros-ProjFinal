@@ -11,8 +11,7 @@ public class MenuScenes : MonoBehaviour
 	public SaveManager SM;
 	public TransitionScript TS;
 	//textos, mudam de acordo com a lingua escolhida pelo jogador
-	public Text txtTest, txtLanguage, txtQuitGame, 
-				txtStage1;
+	public Text txtLanguage, txtQuitGame, txtNewGame, txtLoadGame;
 	
 	private void Start()
 	{
@@ -28,17 +27,17 @@ public class MenuScenes : MonoBehaviour
 		switch (SM.GameLanguage)
 		{
 			case "English":
-			txtTest.text = "Test";
 			txtLanguage.text = "Language";
 			txtQuitGame.text = "Quit Game";
-			txtStage1.text = "Stage 1";
+			txtNewGame.text = "New Game";
+			txtLoadGame.text = "Load Game";
 			break;
 			
 			case "Portugues":
-			txtTest.text = "Teste";
 			txtLanguage.text = "Língua";
 			txtQuitGame.text = "Sair do Jogo";
-			txtStage1.text = "Nível 1";
+			txtNewGame.text = "Novo Jogo";
+			txtLoadGame.text = "Continuar";
 			break;
 		}
 	}
@@ -52,12 +51,18 @@ public class MenuScenes : MonoBehaviour
 	
 	public void NewGame()
 	{
-		
+		SM.S1Checkpoint = false;
+		SM.S2Checkpoint = false;
+		SM.CurrentStage = "Stage1";
+		SM.Score = 0;
+		SM.Save();
+		TS.Transition(false, "Stage1");
 	}
 	
 	public void LoadGame()
 	{
-		
+		SM.Save();
+		TS.Transition(false, SM.CurrentStage);
 	}
 	
 	public void LoadLevel()

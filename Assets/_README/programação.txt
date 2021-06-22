@@ -15,9 +15,10 @@ Ligado ao objeto GameSystems. Pausa o jogo com Time.timeScale e da enable no men
 
 PlayerHealth:
 Ligado ao jogador. Tem as funções:
--TakeDamage(int dmg, float knkb): Da dano no jogador, deixa ele temporariamente imune a dano e usa uma função de PlayerMovement para dar knockback e stun nele.
+-TakeDamage(int dmg, bool ignInvul, float knkb): Da dano no jogador, deixa ele temporariamente imune a dano e usa uma função de PlayerMovement para dar knockback e stun nele.
 -RestoreHP(int heal): Cura a vida do jogador.
--SetText(): Atualiza o total de vida na UI. Chamado em Start, TakeDamage e RestoreHP.
+-AddSpr(): Adiciona sprites de ponto de vida na health bar. Chamado em Start e RestoreHP.
+-RemoveSpr(): Remove sprites de ponto de vida da health bar. Chamado em TakeDamage
 
 DamagePlayer:
 Ligado a objetos que dão dano no jogador. Chama TakeDamage se colide com o Player, pode ou não ser deletado quando colide com um objeto.
@@ -69,3 +70,12 @@ Ligado aos parentObjects de espinho. Cria um raycast que, quando o jogador passa
 
 LoreTrigger:
 Ligado às pranchetas. Quando o jogador aperta o botão de interagir enquanto dentro do trigger, pausa o jogo e abre um sprite de prancheta com texto.
+
+Score:
+Ligado à ScoreBar. Quando a função SetScore(int scr) é ativada, aumenta o Score do jogador e atualiza o texto.
+
+RotCamTrigger:
+Ligado a triggers espalhados pelo Stage 3. Ativa a função RotateCamera de TopDownCamera, faz a câmera mudar sua rotação.
+
+SaveManager:
+Feito com base no SaveManager mostrado durante a aula. É usado para salvar e loadar o jogo.

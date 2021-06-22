@@ -14,9 +14,13 @@ public class SaveManager : MonoBehaviour
 	public string CurrentStage;
 	public bool S1Checkpoint;
 	public bool S2Checkpoint;
+	public int Score;
+	public int HighScore;
 
     private void Awake()
     {
+		if(CurrentStage == "") CurrentStage = "Stage1";
+		
         print(Application.persistentDataPath);
         if (instance != null && instance != this)
             Destroy(gameObject);
@@ -39,6 +43,8 @@ public class SaveManager : MonoBehaviour
 			CurrentStage = data.CurrentStage;
 			S1Checkpoint = data.S1Checkpoint;
 			S2Checkpoint = data.S2Checkpoint;
+			Score = data.Score;
+			HighScore = data.HighScore;
 
             file.Close();
         }
@@ -55,6 +61,8 @@ public class SaveManager : MonoBehaviour
 		data.CurrentStage = CurrentStage;
 		data.S1Checkpoint = S1Checkpoint;
 		data.S2Checkpoint = S2Checkpoint;
+		data.Score = Score;
+		data.HighScore = HighScore;
 		
         bf.Serialize(file, data);
         file.Close();
@@ -70,4 +78,6 @@ class PlayerData_Storage
 	public string CurrentStage;
 	public bool S1Checkpoint;
 	public bool S2Checkpoint;
+	public int Score;
+	public int HighScore;
 }
