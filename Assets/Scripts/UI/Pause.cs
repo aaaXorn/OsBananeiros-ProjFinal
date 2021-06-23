@@ -14,12 +14,11 @@ public class Pause : MonoBehaviour
 	public bool clipboard;
 	
 	//velocidade do tempo quando o jogo está despausado
-    float unpausedTimeScale = 1;
+    float unpausedTimeScale = 1.2f;
 
 	void Start()
 	{
-		//deixa o cursor invisível
-		Cursor.visible = false;
+		UnpauseGame();
 	}
 
     void Update()

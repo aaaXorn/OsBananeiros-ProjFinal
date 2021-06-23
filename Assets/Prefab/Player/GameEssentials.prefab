@@ -4328,7 +4328,7 @@ MonoBehaviour:
   adjustY: 1
   transformAdjustY: 3
   adjustDistance: 7
-  adjustRotation: 400
+  adjustRotation: 450
   mayRotate: 1
 --- !u!20 &9118190560041279020
 Camera:
@@ -4438,7 +4438,7 @@ MonoBehaviour:
   TS: {fileID: 7727919144824800127}
   audioS_loop: {fileID: 8096666490215084187}
   audioS_jump: {fileID: 5861357419324436472}
-  moveSpeed: 10.5
+  moveSpeed: 8.75
   grab: 0
   jumpRaycastSize: 0.5
   jumpForce: 250
@@ -5678,6 +5678,9 @@ MonoBehaviour:
   CurrentStage: 
   S1Checkpoint: 0
   S2Checkpoint: 0
+  Score: 0
+  HighScore: 0
+  S3Checkpoints: 0
 --- !u!1 &9118190561911838097
 GameObject:
   m_ObjectHideFlags: 0

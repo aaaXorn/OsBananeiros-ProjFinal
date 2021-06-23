@@ -4,11 +4,27 @@ using UnityEngine;
 
 public class LoreTrigger : MonoBehaviour
 {
+	public SaveManager SM;
+	
 	public Pause pScript;
 	public PauseMenu PM;
 	public ItemGrab IG;
 	
-    public string lore;
+    public string lore, loreEN, lorePT;
+	
+	void Start()
+	{
+		switch (SM.GameLanguage)
+		{
+			case "English":
+			lore = loreEN;
+			break;
+			
+			case "Portugues":
+			lore = lorePT;
+			break;
+		}
+	}
 	
 	void OnTriggerStay(Collider other)
 	{

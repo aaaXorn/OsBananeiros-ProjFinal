@@ -62,7 +62,9 @@
      <Compile Include="Assets\Scripts\Pickups\Key\RodaCompartScript.cs" />
      <Compile Include="Assets\Scripts\Pickups\Key\KeyActivate.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuScenes.cs" />
+     <Compile Include="Assets\Scripts\Scenario\Scenes\S3Checkpoints.cs" />
      <Compile Include="Assets\Scripts\Pickups\HealPlayer.cs" />
+     <Compile Include="Assets\Scripts\Scenario\Scenes\S3CheckpointSpawn.cs" />
      <Compile Include="Assets\Scripts\UI\Score.cs" />
      <Compile Include="Assets\Scripts\Scenario\Scenes\ResetCheckpoint2.cs" />
      <Compile Include="Assets\Scripts\Menu\TransitionScript.cs" />

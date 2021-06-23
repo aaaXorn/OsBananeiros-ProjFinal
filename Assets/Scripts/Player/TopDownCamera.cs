@@ -30,7 +30,9 @@ public class TopDownCamera : MonoBehaviour
 		CameraDummy.transform.position = FollowTarget.transform.position;
 		
 		//posiciona a câmera baseado no CameraDummy
-		transform.position = CameraDummy.transform.position - (CameraDummy.transform.forward * adjustX) + (Vector3.up * adjustDistance);
+		//transform.position = CameraDummy.transform.position - (CameraDummy.transform.forward * adjustX) + (Vector3.up * adjustDistance);
+		transform.position = (new Vector3(CameraDummy.transform.position.x, 0, CameraDummy.transform.position.z) -
+							  (CameraDummy.transform.forward * adjustX) + (Vector3.up * adjustDistance));
 		
 		//rotaciona a câmera para ela olhar pro player
 		transform.LookAt(FollowTarget.transform.position);
