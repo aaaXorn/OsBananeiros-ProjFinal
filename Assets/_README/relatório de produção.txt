@@ -5,6 +5,7 @@ Modelos: Poção, Imã, Bebedouro, Chave de Fenda, Casa da gaiola, Queijo, lápi
 
 Renan Carr Ribeiro Pesciotto
 Scripts: PlayerCamera, PlayerMovement, ItemGrab, MagnetPickup, Pause, PlayerHealth, DamagePlayer, HealPlayer, KeyActivate, MenuScenes, PauseMenu, Stage1Gate, DroneMovement, TransitionScript, PropellerRotation, SceneTransition, StopSpin, Stage2Button, DeactivateDmg, ResetCheckpoint2, TopDownCamera, S3Chase, AutoSpike, LoreTrigger, Score, RotCamTrigger, SaveManager, S3Checkpoints, S3CheckpointSpawn.
+Tradução: Inglês.
 
 Victor Hugo Teixeira Pontes
 Modelos: Roda de exercícios.
