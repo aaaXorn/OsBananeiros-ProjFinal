@@ -85,3 +85,9 @@ Quando colidem com o jogador, aumentam o valor de SaveManager.S3Checkpoints, que
 
 S3CheckpointSpawn:
 Checa quantos checkpoints do Stage 3 foram pegos e spawna o jogador no local certo.
+
+AcidFlask:
+Ligado aos projéteis de ácido do boss. Faz o projétil ir até o alvo em uma pseudo-parábola. Da Instantiate em um stage hazard quando toca no chão.
+
+AcidTimerSet:
+Ligado a um child object dos projéteis de ácido do boss. Calcula o float quarterTimer do AcidFlask para o script funcionar corretamente. Também faz um delay no acionamento dele.

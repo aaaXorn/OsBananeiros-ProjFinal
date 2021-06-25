@@ -9,6 +9,7 @@ TagManager:
   - Chest
   - Chase
   - StopChase
+  - BossArena
   layers:
   - Default
   - TransparentFX

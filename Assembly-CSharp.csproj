@@ -52,11 +52,12 @@
      <Compile Include="Assets\Scripts\UI\Pause.cs" />
      <Compile Include="Assets\Scripts\Enemy\DamagePlayer.cs" />
      <Compile Include="Assets\Scripts\Player\ItemGrab.cs" />
-     <Compile Include="Assets\Scripts\Enemy\AutoSpike.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Stage3\AutoSpike.cs" />
      <Compile Include="Assets\Scripts\Scenario\DeactivateDmg.cs" />
      <Compile Include="Assets\Scripts\Pickups\Key\Stage1Gate.cs" />
      <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Stage4\AcidTimerSet.cs" />
      <Compile Include="Assets\Scripts\UI\LoreTrigger.cs" />
      <Compile Include="Assets\Scripts\Scenario\Stage2Button.cs" />
      <Compile Include="Assets\Scripts\Pickups\Key\RodaCompartScript.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\Scripts\Menu\MenuScenes.cs" />
      <Compile Include="Assets\Scripts\Scenario\Scenes\S3Checkpoints.cs" />
      <Compile Include="Assets\Scripts\Pickups\HealPlayer.cs" />
+     <Compile Include="Assets\Scripts\Player\SmoothCamera.cs" />
      <Compile Include="Assets\Scripts\Scenario\Scenes\S3CheckpointSpawn.cs" />
      <Compile Include="Assets\Scripts\UI\Score.cs" />
      <Compile Include="Assets\Scripts\Scenario\Scenes\ResetCheckpoint2.cs" />
@@ -74,11 +76,12 @@
      <Compile Include="Assets\Scripts\Scenario\StopSpin.cs" />
      <Compile Include="Assets\Scripts\Menu\SaveManager.cs" />
      <Compile Include="Assets\Scripts\Scenario\PropelerRotation.cs" />
-     <Compile Include="Assets\Scripts\Enemy\ScientistAI.cs" />
-     <Compile Include="Assets\Scripts\Enemy\S3Chase.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Stage4\ScientistAI.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Stage3\S3Chase.cs" />
      <Compile Include="Assets\Scripts\Pickups\MagnetPull.cs" />
      <Compile Include="Assets\Scripts\Scenario\DroneMovement.cs" />
-     <Compile Include="Assets\Scripts\Enemy\ScientistHP.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Stage4\ScientistHP.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Stage4\AcidFlask.cs" />
      <None Include="Assets\Models\Player\manual pro olho funcionar.txt" />
      <None Include="Assets\Sound\SFX\SFX List.txt" />
      <None Include="Assets\_README\programação.txt" />
