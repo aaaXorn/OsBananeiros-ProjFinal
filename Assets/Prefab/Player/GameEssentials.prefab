@@ -4448,6 +4448,8 @@ MonoBehaviour:
   deathTime: 1
   stunned: 0
   stunTime: 0
+  RatoelhoAsset: {fileID: 8235742111285631795}
+  DeathSFX: {fileID: 1569149153567747963, guid: e373f7d8c12166d4e9f74d5124422224, type: 3}
   State: 0
 --- !u!114 &9118190560055617170
 MonoBehaviour:

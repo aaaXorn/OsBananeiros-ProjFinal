@@ -46,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
 	//se o jogador não consegue se mover
 	public bool stunned;
 	public float stunTime;
+	public GameObject RatoelhoAsset;
+	public GameObject DeathSFX;
 	
 	//estados do jogador
 	public enum PlayerState
@@ -210,6 +212,8 @@ public class PlayerMovement : MonoBehaviour
 	IEnumerator Dead()
 	{
 		dying = true;
+		RatoelhoAsset.SetActive(false);
+		Instantiate(DeathSFX, (transform.position + Vector3.up), transform.rotation);
 		yield return new WaitForSeconds(deathTime);
 		TS.Transition(false, SceneManager.GetActiveScene().name);
 	}
