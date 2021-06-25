@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
-	[SerializeField]
-	Pause pause;
-	
 	public GameObject FollowTarget;
 	GameObject CameraDummy;
 	
