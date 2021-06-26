@@ -1,5 +1,5 @@
 PlayerCamera:
-Ligado à camera. Faz ela seguir o jogador se movendo e rotacionando.
+Ligado à camera do Stage 1. Faz ela seguir o jogador se movendo e rotacionando.
 
 PlayerMovement:
 Ligado ao jogador. Faz ele poder se mover e pular.
@@ -86,8 +86,14 @@ Quando colidem com o jogador, aumentam o valor de SaveManager.S3Checkpoints, que
 S3CheckpointSpawn:
 Checa quantos checkpoints do Stage 3 foram pegos e spawna o jogador no local certo.
 
-AcidFlask:
+AcidFlask: (não utilizado)
 Ligado aos projéteis de ácido do boss. Faz o projétil ir até o alvo em uma pseudo-parábola. Da Instantiate em um stage hazard quando toca no chão.
 
-AcidTimerSet:
+AcidTimerSet: (não utilizado)
 Ligado a um child object dos projéteis de ácido do boss. Calcula o float quarterTimer do AcidFlask para o script funcionar corretamente. Também faz um delay no acionamento dele.
+
+SmoothCamera:
+Ligado à câmera do Stage 2 e 4. Uma versão de PlayerCamera que se aproxima do player quando o raycast dela toca em algo, impedindo ela de entrar em paredes.
+
+AcidFlaskV2:
+Ligado aos projéteis de ácido do boss. Faz eles subirem até um ponto e, depois de um tempo, irem em direção a outro, dando Instantiate em um stage hazard de ácido quando toca na bancada.
