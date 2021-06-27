@@ -10,6 +10,7 @@ TagManager:
   - Chase
   - StopChase
   - BossArena
+  - Barrel
   layers:
   - Default
   - TransparentFX

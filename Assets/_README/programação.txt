@@ -97,3 +97,10 @@ Ligado à câmera do Stage 2 e 4. Uma versão de PlayerCamera que se aproxima do
 
 AcidFlaskV2:
 Ligado aos projéteis de ácido do boss. Faz eles subirem até um ponto e, depois de um tempo, irem em direção a outro, dando Instantiate em um stage hazard de ácido quando toca na bancada.
+
+ScientistAI:
+
+ScientistHP:
+
+S4Magnet:
+Ligado ao imã do Stage 4. Parecido com MagnetPull, mas atrai objetos com a tag "Barrel" e usa velocity em vez de AddForce.
