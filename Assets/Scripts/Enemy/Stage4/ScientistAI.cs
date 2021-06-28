@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ScientistAI : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class ScientistAI : MonoBehaviour
 	public ScientistHP SHP;
 	public Animator anim;
 	
-	public UnityEngine.AI.NavMeshAgent agent;
+	public NavMeshAgent agent;
 	
 	//transform do player,
 	public Transform trnfPlayer;
@@ -38,6 +39,10 @@ public class ScientistAI : MonoBehaviour
 	[SerializeField] float raycastStartPoint, raycastSize;
 	//informação do que o raycast acertou
 	RaycastHit hitInfo;
+	
+	public bool dead;
+	//alçapão que é aberto quando o boss morre
+	public GameObject Alcapao;
 	
 	//patterns do boss
 	public enum Pattern
@@ -109,7 +114,14 @@ public class ScientistAI : MonoBehaviour
 	
 	void Dead()
 	{
-		
+		if(!dead)
+		{
+			agent.SetDestination(transform.position);
+			
+			Alcapao.transform.Rotate(0, 0, -32);
+			
+			dead = true;
+		}
 	}
 	
 	void Slap()

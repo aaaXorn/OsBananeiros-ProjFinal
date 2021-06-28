@@ -6,6 +6,8 @@ public class PlayerBarrel : MonoBehaviour
 {
 	public ScientistAI SAI;
 	
+	public GameObject ExplodeSFX;
+	
 	public Rigidbody rigid;
 	
     public float speed;
@@ -25,7 +27,9 @@ public class PlayerBarrel : MonoBehaviour
 		{
 			SAI.barrels--;
 			
-			Destroy(gameObject);
+			ExplodeSFX.SetActive(true);
+			
+			Destroy(gameObject, 0.5f);
 		}
 		
 		//se colide com o boss
@@ -33,7 +37,9 @@ public class PlayerBarrel : MonoBehaviour
 		{
 			SAI.SHP.TakeDamage();
 			
-			Destroy(gameObject);
+			ExplodeSFX.SetActive(true);
+			
+			Destroy(gameObject, 0.5f);
 		}
 	}
 }
