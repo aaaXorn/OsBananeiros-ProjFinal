@@ -143,7 +143,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &8235877919032114779
 MonoBehaviour:
@@ -157,8 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89ca6839eead11941b4aa06011b74a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 0}
-  trnfPot: {fileID: 8485078744363578258}
+  Target: {x: 0, y: 0, z: 0}
   RisePos: {x: 0, y: 0, z: 0}
   AcidSpawn: {fileID: 2841394838854726368, guid: bfd84166fae1e7c40877ceedb3fcb31e, type: 3}
   height: 8

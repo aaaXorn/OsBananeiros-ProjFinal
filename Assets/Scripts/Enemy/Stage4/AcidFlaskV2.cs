@@ -5,7 +5,7 @@ using UnityEngine;
 public class AcidFlaskV2 : MonoBehaviour
 {
 	//posição em que o stage hazard será spawnado
-	public Transform Target;
+	public Vector3 Target;
 	//posição que o frasco subirá antes de ser arremessado
 	public Vector3 RisePos;
 	
@@ -35,7 +35,7 @@ public class AcidFlaskV2 : MonoBehaviour
 		else
 		{
 			//move o frasco até o alvo
-			transform.position = Vector3.MoveTowards(transform.position, Target.position, diveSpd * Time.deltaTime);
+			transform.position = Vector3.MoveTowards(transform.position, Target, diveSpd * Time.deltaTime);
 		}
     }
 	
@@ -44,7 +44,7 @@ public class AcidFlaskV2 : MonoBehaviour
 		//quando toca na bancada, spawna o stage hazard e é destruído
 		if(other.gameObject.CompareTag("BossArena"))
 		{
-			Instantiate(AcidSpawn, Target.position + Vector3.down, Target.rotation);
+			Instantiate(AcidSpawn, transform.position, transform.rotation);
 			
 			Destroy(gameObject);
 		}
