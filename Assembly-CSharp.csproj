@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\Menu\TransitionScript.cs" />
      <Compile Include="Assets\Scripts\Scenario\Scenes\SceneTransition.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Stage4\PlayerBarrel.cs" />
      <Compile Include="Assets\Scripts\UI\RotCamTrigger.cs" />
      <Compile Include="Assets\Scripts\Scenario\StopSpin.cs" />
      <Compile Include="Assets\Scripts\Menu\SaveManager.cs" />
@@ -81,6 +82,7 @@
      <Compile Include="Assets\Scripts\Enemy\Stage4\AcidFlaskV2.cs" />
      <Compile Include="Assets\Scripts\Pickups\MagnetPull.cs" />
      <Compile Include="Assets\Scripts\Enemy\Stage4\S4Magnet.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Stage4\BarrelAtk.cs" />
      <Compile Include="Assets\Scripts\Scenario\DroneMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Stage4\ScientistHP.cs" />
      <Compile Include="Assets\Scripts\Enemy\Stage4\AcidFlask.cs" />
