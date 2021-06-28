@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BarrelAtk : MonoBehaviour
+{
+	public ScientistAI SAI;
+	
+	public Rigidbody rigid;
+	
+	//barril que o jogador usa
+	public GameObject Barrel2;
+	
+	//velocidade
+	public float speed;
+	//vetor de movimento
+	public Vector3 Movement;
+
+	void Start()
+	{
+		Movement = new Vector3 (0, 0, speed);
+	}
+
+    void Update()
+    {
+        rigid.velocity = transform.TransformDirection(Movement);
+    }
+	
+	void OnCollisionEnter(Collision other)
+	{
+		//quando toca na parede, spawna o outro barril e é destruído
+		if(other.gameObject.CompareTag("Wall"))
+		{
+			GameObject otherBarrel = Instantiate(Barrel2, transform.position, transform.rotation);
+			
+			otherBarrel.GetComponent<PlayerBarrel>().SAI = SAI;
+			
+			Destroy(gameObject);
+		}
+	}
+}

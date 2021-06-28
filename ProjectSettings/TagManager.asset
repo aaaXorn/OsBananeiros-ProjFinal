@@ -11,14 +11,16 @@ TagManager:
   - StopChase
   - BossArena
   - Barrel
+  - Wall
+  - Boss
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Magnet
   - Water
   - UI
-  - 
+  - Boss
   - 
   - 
   - 

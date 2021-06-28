@@ -24,8 +24,8 @@ public class S4Magnet : MonoBehaviour
 			//se o raycast acertar um pickup
 			if(hitInfo.collider.tag == "Barrel")
 			{
-				//adiciona velocidade para no objeto acertado pelo raycast na direção do imã
-				hitInfo.collider.gameObject.GetComponent<Rigidbody>().velocity = (-transform.forward * pullSpd);
+				//adiciona velocidade para no objeto acertado pelo raycast
+				hitInfo.collider.gameObject.GetComponent<PlayerBarrel>().speed = pullSpd;
 			}
 		}
 	}

@@ -15,22 +15,15 @@ public class ScientistHP : MonoBehaviour
 		
 	}
 	
-	void TakeDamage()
+	public void TakeDamage()
 	{
+		SAI.barrels--;
+		
 		HP--;
 		
 		//fim da boss fight
 		if(HP <= 0)
 			SAI.currentPatt = ScientistAI.Pattern.Dead;
 		//else SAI.currentPatt = ScientistAI.Pattern.Damage;
-	}
-	
-	void OnCollisionEnter(Collision other)
-	{
-		//se colide com um barril
-		if(other.gameObject.CompareTag("Barrel"))
-		{
-			TakeDamage();
-		}
 	}
 }

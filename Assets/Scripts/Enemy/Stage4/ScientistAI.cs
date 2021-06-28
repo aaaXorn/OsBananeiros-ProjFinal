@@ -128,7 +128,7 @@ public class ScientistAI : MonoBehaviour
 			if(hitInfo.collider != null)
 			{
 				//se o raycast acertar a bancada
-				if(hitInfo.collider.tag == "BossArena")
+				if(hitInfo.collider.tag == "Wall")
 				{
 					anim.SetTrigger("Slap");
 					
@@ -173,6 +173,8 @@ public class ScientistAI : MonoBehaviour
 	{
 		if(!atkStart)
 		{
+			transform.LookAt(trnfPlayer.position);
+			
 			anim.SetTrigger("Throw");
 			
 			atkStart = true;
@@ -183,8 +185,10 @@ public class ScientistAI : MonoBehaviour
 		if(atkTimer >= barrelTimer)
 		{
 			GameObject BarrelT = Instantiate(BarrelPrefab, transform.position, transform.rotation);
-			Vector3 spawn = transform.TransformDirection(SpawnPoint);
+			Vector3 spawn = transform.TransformDirection(SpawnPoint) - (Vector3.up * 3.5f);
 			BarrelT.transform.position = BarrelT.transform.position + spawn;
+			
+			BarrelT.GetComponent<BarrelAtk>().SAI = gameObject.GetComponent<ScientistAI>();
 			
 			currentPatt = Pattern.CD;
 		}

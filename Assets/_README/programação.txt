@@ -104,3 +104,6 @@ ScientistHP:
 
 S4Magnet:
 Ligado ao imã do Stage 4. Parecido com MagnetPull, mas atrai objetos com a tag "Barrel" e usa velocity em vez de AddForce.
+
+BarrelAtk:
+Ligado aos projéteis de barril do boss. Se movimenta em linha reta até atingir uma parede, dai spawna o barril que o jogador pode usar pra dar dano no boss.
