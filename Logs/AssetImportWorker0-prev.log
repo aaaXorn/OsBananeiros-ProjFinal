@@ -15,11 +15,11 @@ C:/Users/nicol/OneDrive/Documents/GitHub/OsBananeiros-ProjFinal2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-7574
+22763
 Successfully changed project path to: C:/Users/nicol/OneDrive/Documents/GitHub/OsBananeiros-ProjFinal2
 C:/Users/nicol/OneDrive/Documents/GitHub/OsBananeiros-ProjFinal2
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 32.11 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 39.09 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.8f1 (507919d4fff5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
@@ -35,180 +35,52 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56484
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56548
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002286 seconds.
+Registered in 0.002599 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 29.47 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 37.05 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unable to find bridge dll in registry for Microsoft Visual Studio Tools for Unity for C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
 Mono: successfully reloaded assembly
-- Completed reload, in  1.151 seconds
+- Completed reload, in  1.379 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001210 seconds.
+Registered in 0.002269 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.958 seconds
+- Completed reload, in  1.224 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1154 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 58.7 MB.
+System memory in use before: 58.8 MB.
 System memory in use after: 58.8 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1599.
-Total: 1.620400 ms (FindLiveObjects: 0.117300 ms CreateObjectMapping: 0.034200 ms MarkObjects: 1.342500 ms  DeleteObjects: 0.125600 ms)
+Total: 2.501800 ms (FindLiveObjects: 0.295500 ms CreateObjectMapping: 0.066500 ms MarkObjects: 1.966900 ms  DeleteObjects: 0.170600 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Models
-  artifactKey: Guid(639c7d32b09580a41a2e58cfcc3a79fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models using Guid(639c7d32b09580a41a2e58cfcc3a79fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcc46fb71b5386565218a524a19a07ba') in 0.028397 seconds
-  Import took 0.030354 seconds .
+  path: Assets/Models/Cientista_versao_Final 1.fbx
+  artifactKey: Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Cientista_versao_Final 1.fbx using Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49df76bdd210054b5eeefae906232065') in 1.025646 seconds
+  Import took 1.029440 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.633937 seconds.
-  path: Assets/Models/bebedouro.fbx
-  artifactKey: Guid(341dd417be2f34b47a532332f322c0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/bebedouro.fbx using Guid(341dd417be2f34b47a532332f322c0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f29a165f6d859b26969d436032addda6') in 1.251166 seconds
-  Import took 1.286348 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Models/PRANCHETA.fbx
-  artifactKey: Guid(00f20123885812d458bba395404e801d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/PRANCHETA.fbx using Guid(00f20123885812d458bba395404e801d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a82a9904c22f29aeee2a18d6a6a1e6c') in 0.094924 seconds
-  Import took 0.182019 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000277 seconds.
-  path: Assets/Models/cheese1.fbx
-  artifactKey: Guid(dba32fb1fafaee8448bee85feea87116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/cheese1.fbx using Guid(dba32fb1fafaee8448bee85feea87116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1752e853cfaa16bf0665ceae9307c215') in 0.180400 seconds
-  Import took 0.223710 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000240 seconds.
-  path: Assets/Models/mesa_lab.fbx
-  artifactKey: Guid(67f1407d504e2f2418d4307a5f533270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/mesa_lab.fbx using Guid(67f1407d504e2f2418d4307a5f533270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eef6465816198caa85577b7f39b8fe1d') in 0.105011 seconds
-  Import took 0.180846 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/Models/compartimentoroda2.fbx
-  artifactKey: Guid(936253748cbfb2b44b5437a6ef05a858) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/compartimentoroda2.fbx using Guid(936253748cbfb2b44b5437a6ef05a858) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79d8fa88c03d78efa58acaa438bf7b83') in 0.153412 seconds
-  Import took 0.201778 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000333 seconds.
-  path: Assets/Models/Vent (1).prefab
-  artifactKey: Guid(75b51c0a0b4ee96479e7a73f6781c204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Vent (1).prefab using Guid(75b51c0a0b4ee96479e7a73f6781c204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54a1a9bdd3ddb67cb401226de2d8f2e2') in 0.131807 seconds
-  Import took 0.162002 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000342 seconds.
-  path: Assets/Models/lapis.fbx
-  artifactKey: Guid(861eb9b3537887842be94a605a0a134d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/lapis.fbx using Guid(861eb9b3537887842be94a605a0a134d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0935f75a4082e1fb5804bf771816929') in 0.077275 seconds
-  Import took 0.131469 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000483 seconds.
-  path: Assets/Models/chavedefenda.fbx
-  artifactKey: Guid(8ca3de0ee3ea6ea4fa6723c3a3ea4085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/chavedefenda.fbx using Guid(8ca3de0ee3ea6ea4fa6723c3a3ea4085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95e971f7d20f8391cb3048f328f75057') in 0.098528 seconds
-  Import took 0.100911 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Models/compartimentoroda1.fbx
-  artifactKey: Guid(0fa732e8cd4369a4ab3ffa7175a7f94d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/compartimentoroda1.fbx using Guid(0fa732e8cd4369a4ab3ffa7175a7f94d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '139028d4ab0dbf0a5f61316df2a61391') in 0.066358 seconds
-  Import took 0.085555 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000258 seconds.
-  path: Assets/Models/CASAofc.fbx
-  artifactKey: Guid(75a086337678bc6418a1c94da2d46275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/CASAofc.fbx using Guid(75a086337678bc6418a1c94da2d46275) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '404c38db8e924f86bfea4d51fa3d56d4') in 0.350915 seconds
-  Import took 0.380436 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000310 seconds.
-  path: Assets/Models/bodyversao6.fbx
-  artifactKey: Guid(6040acb9703ca194eb767768a9bb90ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/bodyversao6.fbx using Guid(6040acb9703ca194eb767768a9bb90ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbe6714cff3607cd4b7d360aa518e320') in 0.051946 seconds
-  Import took 0.054023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000277 seconds.
-  path: Assets/Models/stage4_bancada_maior.fbx
-  artifactKey: Guid(e94e961a16e4bdf45a412b376ebc178c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/stage4_bancada_maior.fbx using Guid(e94e961a16e4bdf45a412b376ebc178c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '067c40edfa125371f4b3e9e6145aca23') in 0.188339 seconds
-  Import took 0.228922 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Models/bodyversao6.fbx
-  artifactKey: Guid(6040acb9703ca194eb767768a9bb90ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/bodyversao6.fbx using Guid(6040acb9703ca194eb767768a9bb90ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbe6714cff3607cd4b7d360aa518e320') in 0.037234 seconds
-  Import took 0.039536 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Models/bodyversao10_11 1.fbx
-  artifactKey: Guid(847aab3acf8901d4290d82836923e473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/bodyversao10_11 1.fbx using Guid(847aab3acf8901d4290d82836923e473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0816eb26de6b6fdb8e7b7a762c00cb97') in 0.202491 seconds
-  Import took 0.220719 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Models/magnet3.fbx
-  artifactKey: Guid(6197fa438b17984478575c095b7e37db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/magnet3.fbx using Guid(6197fa438b17984478575c095b7e37db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c6075a0adddc1614116fcba217fe78e') in 0.066557 seconds
-  Import took 0.086091 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 47.370605 seconds.
-  path: Assets/Models/Cientista_versao_Final.fbx
-  artifactKey: Guid(7361a295e5827eb488d6eeb3e4261ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Cientista_versao_Final.fbx using Guid(7361a295e5827eb488d6eeb3e4261ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b99975faa929a302781a0edeeea9d0c') in 0.126406 seconds
-  Import took 0.130974 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004708 seconds.
-  path: Assets/Models/Cientista_versao_Final.fbx
-  artifactKey: Guid(7361a295e5827eb488d6eeb3e4261ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Cientista_versao_Final.fbx using Guid(7361a295e5827eb488d6eeb3e4261ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b99975faa929a302781a0edeeea9d0c') in 0.112121 seconds
-  Import took 0.115209 seconds .
+  Time since last request: 0.001873 seconds.
+  path: Assets/Models/Cientista_versao_Final 1.fbx
+  artifactKey: Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Cientista_versao_Final 1.fbx using Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49df76bdd210054b5eeefae906232065') in 0.382695 seconds
+  Import took 0.385173 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
