@@ -16,3 +16,7 @@ UI: Main Menu, Pause sprite, Health Sprite
 Thomas Mandel Nunes Cavallini
 Modelos: Ratoelho.
 Animações: Ratoelho.
+
+Nícolas Palácio Fray
+Modelos: Cientista maluco (boss)
+Animação: Cientista maluco
