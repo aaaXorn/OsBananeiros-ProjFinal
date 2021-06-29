@@ -94,20 +94,26 @@ public class ScientistAI : MonoBehaviour
 		//faz o boss fazer um dos ataques
 		else
 		{
-			if(barrels > 0)
+			//if(barrels > 0)
+			if(acidUses <= 0)
 			{
-				if(acidUses <= 0)
+				//if(acidUses <= 0)
+				if(barrels > 0)
 					currentPatt = Pattern.Slap;
 				else
 				{
-					acidUses--;
-					currentPatt = Pattern.Acid;
+					//acidUses--;
+					//currentPatt = Pattern.Acid;
+					barrels++;
+					currentPatt = Pattern.Barrel;
 				}
 			}
 			else
 			{
-				barrels++;
-				currentPatt = Pattern.Barrel;
+				//barrels++;
+				//currentPatt = Pattern.Barrel;
+				acidUses--;
+				currentPatt = Pattern.Acid;
 			}
 		}
 	}
@@ -169,12 +175,15 @@ public class ScientistAI : MonoBehaviour
 		
 		atkTimer += Time.deltaTime;
 		
+		//spawna o ácido e encerra o ataque
 		if(atkTimer >= acidTimer)
 		{
 			GameObject Flask = Instantiate(AcidPrefab, transform.position, transform.rotation);
+			//faz o frasco não spawnar dentro do boss
 			Vector3 spawn = transform.TransformDirection(SpawnPoint);
 			Flask.transform.position = Flask.transform.position + spawn;
 			
+			//define a posição de alvo do frasco
 			Flask.GetComponent<AcidFlaskV2>().Target = new Vector3(trnfPlayer.position.x, 2, trnfPlayer.position.z);
 			
 			currentPatt = Pattern.CD;
@@ -185,8 +194,6 @@ public class ScientistAI : MonoBehaviour
 	{
 		if(!atkStart)
 		{
-			transform.LookAt(trnfPlayer.position);
-			
 			anim.SetTrigger("Throw");
 			
 			atkStart = true;
@@ -194,15 +201,21 @@ public class ScientistAI : MonoBehaviour
 		
 		atkTimer += Time.deltaTime;
 		
+		//arremessa o barril e encerra o ataque
 		if(atkTimer >= barrelTimer)
 		{
 			GameObject BarrelT = Instantiate(BarrelPrefab, transform.position, transform.rotation);
+			//faz o barril não spawnar dentro do boss
 			Vector3 spawn = transform.TransformDirection(SpawnPoint) - (Vector3.up * 3.5f);
 			BarrelT.transform.position = BarrelT.transform.position + spawn;
 			
+			//define a variável ScientistAI (script) de BarrelAtk
 			BarrelT.GetComponent<BarrelAtk>().SAI = gameObject.GetComponent<ScientistAI>();
 			
 			currentPatt = Pattern.CD;
 		}
+		//rotaciona o boss pra ele jogar o barril pro lado certo
+		else
+			transform.LookAt(trnfPlayer.position);
 	}
 }

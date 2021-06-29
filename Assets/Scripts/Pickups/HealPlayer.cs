@@ -5,9 +5,12 @@ using UnityEngine;
 public class HealPlayer : MonoBehaviour
 {
     [SerializeField]
-	GameObject Player;
+	GameObject Player, ParentObj;
 	[SerializeField]
 	PlayerHealth PH;
+	
+	[SerializeField]
+	AudioSource eatSFX;
 	
 	//se o objeto é deletado quando colide
 	public bool deleteOnHit;
@@ -27,6 +30,6 @@ public class HealPlayer : MonoBehaviour
 			PH.RestoreHP(healing);
 		
 		if(deleteOnHit)
-			Destroy(gameObject);
+			Destroy(ParentObj);
     }
 }

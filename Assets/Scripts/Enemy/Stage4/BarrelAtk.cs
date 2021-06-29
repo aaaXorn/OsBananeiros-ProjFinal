@@ -15,6 +15,8 @@ public class BarrelAtk : MonoBehaviour
 	public float speed;
 	//vetor de movimento
 	public Vector3 Movement;
+	
+	public bool stop;
 
 	void Start()
 	{
@@ -31,9 +33,16 @@ public class BarrelAtk : MonoBehaviour
 		//quando toca na parede, spawna o outro barril e é destruído
 		if(other.gameObject.CompareTag("Wall"))
 		{
-			GameObject otherBarrel = Instantiate(Barrel2, transform.position, transform.rotation);
-			
-			otherBarrel.GetComponent<PlayerBarrel>().SAI = SAI;
+			if(!stop)
+			{
+				GameObject otherBarrel = Instantiate(Barrel2, transform.position, transform.rotation);
+				
+				otherBarrel.transform.Rotate(0, 180, 0);
+				
+				otherBarrel.GetComponent<PlayerBarrel>().SAI = SAI;
+				
+				stop = true;
+			}
 			
 			Destroy(gameObject);
 		}

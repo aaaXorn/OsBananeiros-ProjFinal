@@ -13,6 +13,8 @@ public class PlayerBarrel : MonoBehaviour
     public float speed;
 	public Vector3 Movement;
 	
+	public bool destroy;
+	
     void Update()
     {
         Movement = new Vector3(0, rigid.velocity.y, speed);
@@ -25,9 +27,14 @@ public class PlayerBarrel : MonoBehaviour
 		//quando toca na parede, spawna o outro barril e é destruído
 		if(other.gameObject.CompareTag("Wall") && speed != 0)
 		{
-			SAI.barrels--;
-			
-			ExplodeSFX.SetActive(true);
+			if(!destroy)
+			{
+				SAI.barrels--;
+				
+				ExplodeSFX.SetActive(true);
+				
+				destroy = true;
+			}
 			
 			Destroy(gameObject, 0.5f);
 		}
@@ -35,9 +42,14 @@ public class PlayerBarrel : MonoBehaviour
 		//se colide com o boss
 		if(other.gameObject.CompareTag("Boss"))
 		{
-			SAI.SHP.TakeDamage();
-			
-			ExplodeSFX.SetActive(true);
+			if(!destroy)
+			{
+				SAI.SHP.TakeDamage();
+				
+				ExplodeSFX.SetActive(true);
+				
+				destroy = true;
+			}
 			
 			Destroy(gameObject, 0.5f);
 		}

@@ -99,14 +99,16 @@ AcidFlaskV2:
 Ligado aos projéteis de ácido do boss. Faz eles subirem até um ponto e, depois de um tempo, irem em direção a outro, dando Instantiate em um stage hazard de ácido quando toca na bancada.
 
 ScientistAI:
+Ligado no boss. Faz ele se mover com NavMeshAgent e alternar entre certos padrões de ataque. Tem um ataque melee, em que ele anda na direção do jogador e da um tapa, e dois ataques ranged. O primeiro é o frasco de ácido (AcidFlaskV2). O segundo é um barril (BarrelAtk).
 
 ScientistHP:
+Ligado no boss. Tem uma variável de vida que diminui quando o jogador acerta ele com um barril. Quando o HP chega em 0, a boss fight acaba e o alçapão do mapa abre, deixando o jogador sair do stage e encerrar o jogo.
 
 S4Magnet:
 Ligado ao imã do Stage 4. Parecido com MagnetPull, mas atrai objetos com a tag "Barrel" e usa velocity em vez de AddForce.
 
 BarrelAtk:
-Ligado aos projéteis de barril do boss. Se movimenta em linha reta até atingir uma parede, dai spawna o barril que o jogador pode usar pra dar dano no boss.
+Ligado aos projéteis de barril do boss. Se movimenta em linha reta até atingir uma parede, dai spawna o barril (PlayerBarrel) que o jogador pode usar pra dar dano no boss.
 
 PlayerBarrel:
 Ligado aos barris que dão dano no boss. Recebe uma variável do imã, que faz ele se mover. Da dano no boss se acertar ele.

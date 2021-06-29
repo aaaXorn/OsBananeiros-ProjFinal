@@ -8,6 +8,12 @@ public class S4Magnet : MonoBehaviour
 	[SerializeField]
 	float raycastStartPoint, raycastSize, pullSpd;
 	
+	//quanto tempo demora pro puxão começar, tempo de reset
+	[SerializeField]
+	float pullTimer, maxPullTimer, resetTimer, maxResetTimer;
+	[SerializeField]
+	bool reset;
+	
 	//informação do que o raycast acertou
 	RaycastHit hitInfo;
 	
@@ -18,14 +24,35 @@ public class S4Magnet : MonoBehaviour
 		//gera o raycast
 		Physics.Raycast(transform.position + (transform.forward * raycastStartPoint), transform.forward, out hitInfo, raycastSize);
 		
-		//para impedir erros
-		if(hitInfo.collider != null)
+		if(!reset)
 		{
-			//se o raycast acertar um pickup
-			if(hitInfo.collider.tag == "Barrel")
+			//para impedir erros
+			if(hitInfo.collider != null)
 			{
-				//adiciona velocidade para no objeto acertado pelo raycast
-				hitInfo.collider.gameObject.GetComponent<PlayerBarrel>().speed = pullSpd;
+				//se o raycast acertar um pickup
+				if(hitInfo.collider.tag == "Barrel")
+				{
+					pullTimer += Time.deltaTime;
+					
+					if(pullTimer >= maxPullTimer)
+					{
+						//adiciona velocidade para no objeto acertado pelo raycast
+						hitInfo.collider.gameObject.GetComponent<PlayerBarrel>().speed = pullSpd;
+						
+						reset = true;
+					}
+				}
+			}
+		}
+		else
+		{
+			resetTimer += Time.deltaTime;
+			
+			if(resetTimer >= maxResetTimer)
+			{
+				pullTimer = 0;
+				resetTimer = 0;
+				reset = false;
 			}
 		}
 	}

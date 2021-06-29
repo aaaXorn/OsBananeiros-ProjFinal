@@ -10,10 +10,8 @@ public class ScientistHP : MonoBehaviour
 	//vida do boss
 	public int HP;
 	
-	void Start()
-	{
-		
-	}
+	[SerializeField]
+	AudioSource HitSFX, UnlockSFX;
 	
 	public void TakeDamage()
 	{
@@ -21,9 +19,16 @@ public class ScientistHP : MonoBehaviour
 		
 		HP--;
 		
+		HitSFX.Play();
+		
 		//fim da boss fight
 		if(HP <= 0)
+		{
+			if(HP == 0)
+				UnlockSFX.Play();
 			SAI.currentPatt = ScientistAI.Pattern.Dead;
-		//else SAI.currentPatt = ScientistAI.Pattern.Damage;
+		}
+		else
+			SAI.acidUses++;
 	}
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5568470518813664500}
   - component: {fileID: 5568470518813664499}
   - component: {fileID: 5568470518813664498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BarrelAtk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,10 +94,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 361a04e35bd9c6646bcd3310b45e98bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SAI: {fileID: 0}
   rigid: {fileID: 5568470518813664499}
   Barrel2: {fileID: 2129381801630469900, guid: 3fe18580e71832b499bca137c936acda, type: 3}
   speed: 25
   Movement: {x: 0, y: 0, z: 0}
+  stop: 0
 --- !u!1 &5568470519169164775
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +111,7 @@ GameObject:
   - component: {fileID: 5568470519169164776}
   - component: {fileID: 5568470519169164778}
   - component: {fileID: 5568470519169164777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +193,7 @@ GameObject:
   - component: {fileID: 5568470519565630938}
   - component: {fileID: 5568470519565630940}
   - component: {fileID: 5568470519565630939}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5568470520139111415}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +287,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5568470520139111414}
-  m_LocalRotation: {x: 0.61237246, y: 0.61237246, z: -0.3535534, w: 0.3535534}
+  m_LocalRotation: {x: -0.3535534, y: 0.3535534, z: -0.61237246, w: -0.61237246}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -306,7 +308,7 @@ GameObject:
   - component: {fileID: 5568470520198838185}
   - component: {fileID: 5568470520198838187}
   - component: {fileID: 5568470520198838186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Electronic Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -124,7 +124,7 @@ public class PlayerHealth : MonoBehaviour
 	public void AddSpr()
 	{
 		//cria um novo Image no Array
-		float posX = (prefabHP.rectTransform.sizeDelta.x * healthSpr.Count * sprPosMult + sprPosAdd) * Screen.width/1150;
+		float posX = (prefabHP.rectTransform.sizeDelta.x * healthSpr.Count * sprPosMult + sprPosAdd) * Screen.width/1300;
 		healthSpr.Push(
 					   Instantiate(prefabHP, transfHP.position + new Vector3((posX - sprPosAddInst), 0, 0),
 								   Quaternion.identity, transfHP)
