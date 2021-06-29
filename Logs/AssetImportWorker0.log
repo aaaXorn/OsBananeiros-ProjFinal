@@ -1,249 +1,118 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.8f1 (507919d4fff5) revision 5273881'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19043.1081; Version 2009; 64bit' Language: 'pt' Physical Memory: 16315 MB
+OS: 'Windows 10 Pro; OS build 19043.1052; Version 2009; 64bit' Language: 'pt' Physical Memory: 8150 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-D:\Programas\Unity\Unity Editor\2020.3.8f1\Editor\Unity.exe
+C:\Program Files\Unity\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/Documentos/GitHub/OsBananeiros-ProjFinal
+C:/Users/nicol/OneDrive/Documents/GitHub/OsBananeiros-ProjFinal2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55738
-Successfully changed project path to: D:/Documentos/GitHub/OsBananeiros-ProjFinal
-D:/Documentos/GitHub/OsBananeiros-ProjFinal
+9892
+Successfully changed project path to: C:/Users/nicol/OneDrive/Documents/GitHub/OsBananeiros-ProjFinal2
+C:/Users/nicol/OneDrive/Documents/GitHub/OsBananeiros-ProjFinal2
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 22.68 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 45.45 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.8f1 (507919d4fff5)
-[Subsystems] Discovering subsystems at path D:/Programas/Unity/Unity Editor/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Documentos/GitHub/OsBananeiros-ProjFinal/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/nicol/OneDrive/Documents/GitHub/OsBananeiros-ProjFinal2/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1070 Ti (ID=0x1b82)
+    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c81)
     Vendor:   
-    VRAM:     8079 MB
-    Driver:   27.21.14.6192
+    VRAM:     1977 MB
+    Driver:   27.21.14.6589
 Initialize mono
-Mono path[0] = 'D:/Programas/Unity/Unity Editor/2020.3.8f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Programas/Unity/Unity Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'D:/Programas/Unity/Unity Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56160
+Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Programas/Unity/Unity Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000922 seconds.
+Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004192 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 26.19 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 40.73 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+Unable to find bridge dll in registry for Microsoft Visual Studio Tools for Unity for C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
 Mono: successfully reloaded assembly
-- Completed reload, in  0.722 seconds
+- Completed reload, in  1.373 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000514 seconds.
+Registered in 0.001044 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.667 seconds
+- Completed reload, in  1.267 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.19 seconds
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1154 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 58.7 MB.
-System memory in use after: 58.7 MB.
+System memory in use after: 58.8 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1599.
-Total: 1.515800 ms (FindLiveObjects: 0.127900 ms CreateObjectMapping: 0.032200 ms MarkObjects: 1.284000 ms  DeleteObjects: 0.070400 ms)
+Total: 4.905300 ms (FindLiveObjects: 1.154600 ms CreateObjectMapping: 0.193200 ms MarkObjects: 3.171900 ms  DeleteObjects: 0.383400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Models/Cientista_versao_Final.fbx
-  artifactKey: Guid(7361a295e5827eb488d6eeb3e4261ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Cientista_versao_Final.fbx using Guid(7361a295e5827eb488d6eeb3e4261ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67de67ec5387ff913dcb5da26f88520b') in 0.260134 seconds
-  Import took 0.262692 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000239 seconds.
-  path: Assets/Models/bodyversao6.fbx
-  artifactKey: Guid(6040acb9703ca194eb767768a9bb90ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/bodyversao6.fbx using Guid(6040acb9703ca194eb767768a9bb90ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeb70fbb677500c22d4800fa37742fac') in 0.022965 seconds
-  Import took 0.024936 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000166 seconds.
-  path: Assets/Models/Cientista_versao_Final 1.fbx
-  artifactKey: Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Cientista_versao_Final 1.fbx using Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7800307d940eb28271fa6113c3d382b') in 0.053140 seconds
-  Import took 0.055481 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000146 seconds.
-  path: Assets/Models/bodyversao10_11 1.fbx
-  artifactKey: Guid(847aab3acf8901d4290d82836923e473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/bodyversao10_11 1.fbx using Guid(847aab3acf8901d4290d82836923e473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68ad9ec392414a92000ea9d6e203fb35') in 0.053162 seconds
-  Import took 0.055401 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 217.348516 seconds.
-  path: Assets/Models/Boss/bodyversao10_11.fbx
+  path: Assets/Models/bodyversao10_11.fbx
   artifactKey: Guid(a0fd2c5030e6fde46beaccb997e26110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Boss/bodyversao10_11.fbx using Guid(a0fd2c5030e6fde46beaccb997e26110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16b7d5b25cfab72bbeed8a28d3d40388') in 0.085102 seconds
-  Import took 0.088271 seconds .
+Start importing Assets/Models/bodyversao10_11.fbx using Guid(a0fd2c5030e6fde46beaccb997e26110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e95e19e97608fbf58247fc07b838672') in 0.792268 seconds
+  Import took 0.802194 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.002240 seconds.
-  path: Assets/Models/Boss/bodyversao10_11.fbx
-  artifactKey: Guid(a0fd2c5030e6fde46beaccb997e26110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Boss/bodyversao10_11.fbx using Guid(a0fd2c5030e6fde46beaccb997e26110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16b7d5b25cfab72bbeed8a28d3d40388') in 0.085473 seconds
-  Import took 0.088177 seconds .
+  Time since last request: 10.737884 seconds.
+  path: Assets/Models/Cientista_Versao_Final2.fbx
+  artifactKey: Guid(2df1a6fcaa3be9844aaac125183bb43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Cientista_Versao_Final2.fbx using Guid(2df1a6fcaa3be9844aaac125183bb43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e61706cc59c4580fab5d6e7afe5caafe') in 0.133601 seconds
+  Import took 0.136377 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.081495 seconds.
-  path: Assets/Models/Boss/bodyversao10_11 1.controller
-  artifactKey: Guid(720396d9c59de1d4094f336ec6e57ba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Boss/bodyversao10_11 1.controller using Guid(720396d9c59de1d4094f336ec6e57ba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d986ca06e7d5a165e7a5e51ea1326e5') in 0.008263 seconds
-  Import took 0.011002 seconds .
+  Time since last request: 134.272119 seconds.
+  path: Assets/Models/Cientista_Versao_Final2.fbx
+  artifactKey: Guid(2df1a6fcaa3be9844aaac125183bb43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Cientista_Versao_Final2.fbx using Guid(2df1a6fcaa3be9844aaac125183bb43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfbd88fcb8e672d5d65efb3b29df1348') in 0.135186 seconds
+  Import took 0.138739 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.745387 seconds.
+  Time since last request: 65.836280 seconds.
+  path: Assets/Models/Cientista_Versao_Final2.fbx
+  artifactKey: Guid(2df1a6fcaa3be9844aaac125183bb43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Cientista_Versao_Final2.fbx using Guid(2df1a6fcaa3be9844aaac125183bb43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '556a87f681308f92d59b1477623768cb') in 0.112540 seconds
+  Import took 0.120123 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 97.010598 seconds.
   path: Assets/Models/Boss
   artifactKey: Guid(76d879cd945cb08439f444644d08a58b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Boss using Guid(76d879cd945cb08439f444644d08a58b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '064bc239f362cadde4c1a5c8184df194') in 0.005304 seconds
-  Import took 0.007122 seconds .
+Start importing Assets/Models/Boss using Guid(76d879cd945cb08439f444644d08a58b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b722fb6d2ad410efcc4354fdd6a966ba') in 0.011641 seconds
+  Import took 0.014111 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 86.159556 seconds.
+  Time since last request: 0.078711 seconds.
   path: Assets/Models/Boss/Cientista_versao_Final 1.fbx
   artifactKey: Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Boss/Cientista_versao_Final 1.fbx using Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '825f71709e279130ac679e9930ecd688') in 0.070032 seconds
-  Import took 0.072413 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 103.125070 seconds.
-  path: Assets/Models/Boss/Cientista_versao_Final 1.fbx
-  artifactKey: Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Boss/Cientista_versao_Final 1.fbx using Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a382ceae614342d55d771eba7cd72d6e') in 0.068265 seconds
-  Import took 0.070946 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.721011 seconds.
-  path: Assets/Models/Boss/Cientista_versao_Final 1.fbx
-  artifactKey: Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Boss/Cientista_versao_Final 1.fbx using Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fff51ed559b6da8c5fdc331eeab9016') in 0.067252 seconds
-  Import took 0.069783 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000381 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.619 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1149 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 75.8 MB.
-System memory in use after: 75.9 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1646.
-Total: 1.529400 ms (FindLiveObjects: 0.161700 ms CreateObjectMapping: 0.039500 ms MarkObjects: 1.275200 ms  DeleteObjects: 0.052100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 310.961478 seconds.
-  path: Assets/Models/Materials/Cor_Olhos.mat
-  artifactKey: Guid(6ac83fba768a84c4a9b83839d2bf9da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Materials/Cor_Olhos.mat using Guid(6ac83fba768a84c4a9b83839d2bf9da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '438baeb425e087079941f10853e79f80') in 0.056758 seconds
-  Import took 0.058845 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000176 seconds.
-  path: Assets/Models/Player/Ratoelho_v1.2.fbx
-  artifactKey: Guid(235ded93f53bad04ab4d82fd8469b2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Player/Ratoelho_v1.2.fbx using Guid(235ded93f53bad04ab4d82fd8469b2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92f903053bcd322710fbe0ee25fa8e86') in 0.071744 seconds
-  Import took 0.074512 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000172 seconds.
-  path: Assets/Materials/Darkness.mat
-  artifactKey: Guid(b6ba8b95b7a4b54428339b5f37ef3f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Darkness.mat using Guid(b6ba8b95b7a4b54428339b5f37ef3f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5de6411a3f6a1a26ea8949338b9be043') in 0.008929 seconds
-  Import took 0.010661 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.219383 seconds.
-  path: Assets/Materials/Flask.mat
-  artifactKey: Guid(39945dadf8026a44dbc8ab5df309306c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Flask.mat using Guid(39945dadf8026a44dbc8ab5df309306c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78b73e85a5dc8b320c74d1d02c351f20') in 0.011610 seconds
-  Import took 0.013555 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000149 seconds.
-  path: Assets/Models/ProjKarting/Replicator.fbx
-  artifactKey: Guid(4daf5ba99a305014db809701db291948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/Replicator.fbx using Guid(4daf5ba99a305014db809701db291948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b232501f90f95c443820ac4ba9736495') in 0.030913 seconds
-  Import took 0.032604 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.041012 seconds.
-  path: Assets/Models/ProjKarting/BG_Platform_-_ventilation 1.fbx
-  artifactKey: Guid(a0afc94e30298d1439b4226bdeffda39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/BG_Platform_-_ventilation 1.fbx using Guid(a0afc94e30298d1439b4226bdeffda39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18301d155c6652f709164bfeea691324') in 0.029317 seconds
-  Import took 0.031559 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.645554 seconds.
-  path: Assets/Models/ProjKarting/bancadadelaboratorio.fbx
-  artifactKey: Guid(037df1b054c58a746bd47cfcb97b9f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/bancadadelaboratorio.fbx using Guid(037df1b054c58a746bd47cfcb97b9f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf35aaeada7cad87e3cbab10f0b6390') in 0.330616 seconds
-  Import took 0.333266 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/Models/ProjKarting/tubodeventilacao1.fbx
-  artifactKey: Guid(46372343639de9b4891b996aa3619ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjKarting/tubodeventilacao1.fbx using Guid(46372343639de9b4891b996aa3619ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81b5369ced726dfd8f8f0cdedad7b0e1') in 0.108336 seconds
-  Import took 0.110164 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000140 seconds.
-  path: Assets/Models/ProjOpenWorld/chave.fbx
-  artifactKey: Guid(6665fdea58074204a9e24b97352c2913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/ProjOpenWorld/chave.fbx using Guid(6665fdea58074204a9e24b97352c2913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91490d64679942f57620d03b2bed2383') in 0.059934 seconds
-  Import took 0.061702 seconds .
+Start importing Assets/Models/Boss/Cientista_versao_Final 1.fbx using Guid(b48cea329ba110d4cae5f57ecf39a9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e36a6e5a1fef9df8ff3a4e9efc0c02d0') in 0.118428 seconds
+  Import took 0.121755 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
