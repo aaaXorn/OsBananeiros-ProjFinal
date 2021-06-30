@@ -25,10 +25,16 @@ public class ScientistHP : MonoBehaviour
 		if(HP <= 0)
 		{
 			if(HP == 0)
+			{
 				UnlockSFX.Play();
+				SAI.anim.SetTrigger("Death");
+			}
 			SAI.currentPatt = ScientistAI.Pattern.Dead;
 		}
 		else
+		{
+			SAI.anim.SetTrigger("Damage");
 			SAI.acidUses++;
+		}
 	}
 }
