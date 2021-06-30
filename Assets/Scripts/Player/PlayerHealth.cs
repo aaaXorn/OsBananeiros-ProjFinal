@@ -66,6 +66,9 @@ public class PlayerHealth : MonoBehaviour
 				//uma vez por ataque tomado
 				if(i == 0)
 				{
+					//animação de tomar dano
+					PM.anim.SetTrigger("Damage");
+					
 					//faz o SFX de dano
 					audioS.PlayOneShot(damageSFX);
 					//da knockback e stunna o player

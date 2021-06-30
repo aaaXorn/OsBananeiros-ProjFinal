@@ -17,15 +17,19 @@ public class BarrelAtk : MonoBehaviour
 	public Vector3 Movement;
 	
 	public bool stop;
+	
+	public GameObject Spin;
 
 	void Start()
 	{
 		Movement = new Vector3 (0, 0, speed);
 	}
 
-    void Update()
+    void FixedUpdate()
     {
         rigid.velocity = transform.TransformDirection(Movement);
+		
+		Spin.transform.Rotate(0, 5, 0);
     }
 	
 	void OnCollisionEnter(Collision other)
@@ -38,6 +42,7 @@ public class BarrelAtk : MonoBehaviour
 				GameObject otherBarrel = Instantiate(Barrel2, transform.position, transform.rotation);
 				
 				otherBarrel.transform.Rotate(0, 180, 0);
+				otherBarrel.GetComponent<PlayerBarrel>().Spin.transform.Rotate(0, transform.rotation.y - 180, 0);
 				
 				otherBarrel.GetComponent<PlayerBarrel>().SAI = SAI;
 				

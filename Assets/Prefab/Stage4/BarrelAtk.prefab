@@ -97,9 +97,10 @@ MonoBehaviour:
   SAI: {fileID: 0}
   rigid: {fileID: 5568470518813664499}
   Barrel2: {fileID: 2129381801630469900, guid: 3fe18580e71832b499bca137c936acda, type: 3}
-  speed: 25
+  speed: 35
   Movement: {x: 0, y: 0, z: 0}
   stop: 0
+  Spin: {fileID: 5568470520139111414}
 --- !u!1 &5568470519169164775
 GameObject:
   m_ObjectHideFlags: 0

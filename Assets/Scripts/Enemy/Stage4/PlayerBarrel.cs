@@ -15,17 +15,27 @@ public class PlayerBarrel : MonoBehaviour
 	
 	public bool destroy;
 	
-    void Update()
+	public GameObject Spin;
+	
+	public float travelTimer;
+	
+    void FixedUpdate()
     {
         Movement = new Vector3(0, rigid.velocity.y, speed);
 		
 		rigid.velocity = transform.TransformDirection(Movement);
+		
+		if(speed > 0)
+		{
+			Spin.transform.Rotate(0, 5, 0);
+			travelTimer += Time.deltaTime;
+		}
     }
 	
 	void OnCollisionEnter(Collision other)
 	{
 		//quando toca na parede, spawna o outro barril e é destruído
-		if(other.gameObject.CompareTag("Wall") && speed != 0)
+		if(other.gameObject.CompareTag("Wall") && travelTimer >= 1)
 		{
 			if(!destroy)
 			{

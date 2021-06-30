@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
 	Rigidbody rigid;
-	[SerializeField]
-	Animator anim;
+	public Animator anim;
 	GameObject CameraDummy;
 	[SerializeField]
 	Pause pause;
@@ -40,14 +39,13 @@ public class PlayerMovement : MonoBehaviour
 	float jumpTimer;//timer da força do pulo
 	public float jumpDuration;//duração do pulo, afeta a distância máxima segurando space
 	
-	[SerializeField]
-	bool dying, dead;
+	public bool dying, dead;
 	public float deathTime;
 	//se o jogador não consegue se mover
 	public bool stunned;
 	public float stunTime;
 	public GameObject RatoelhoAsset;
-	public GameObject DeathSFX;
+	//public GameObject DeathSFX;
 	
 	//estados do jogador
 	public enum PlayerState
@@ -211,9 +209,14 @@ public class PlayerMovement : MonoBehaviour
 	//jogador morto
 	IEnumerator Dead()
 	{
-		dying = true;
-		RatoelhoAsset.SetActive(false);
-		Instantiate(DeathSFX, (transform.position + Vector3.up), transform.rotation);
+		if(!dying)
+		{
+			anim.SetBool("Dead", true);
+			anim.SetTrigger("Death");
+			dying = true;
+		}
+		//RatoelhoAsset.SetActive(false);
+		//Instantiate(DeathSFX, (transform.position + Vector3.up), transform.rotation);
 		yield return new WaitForSeconds(deathTime);
 		TS.Transition(false, SceneManager.GetActiveScene().name);
 	}

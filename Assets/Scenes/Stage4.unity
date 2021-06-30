@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -156.656
       objectReference: {fileID: 0}
+    - target: {fileID: 8220808850734999535, guid: 27c5ab9dc9422a448aa12dc17537b62e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9246a48b5d82dd647b6214eba2f7e49c, type: 3}
     - target: {fileID: 9118190560055617171, guid: 27c5ab9dc9422a448aa12dc17537b62e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.36
@@ -3125,7 +3129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycastStartPoint: 1.25
   raycastSize: 100
-  pullSpd: 25
+  pullSpd: 35
   pullTimer: 0
   maxPullTimer: 0.15
   resetTimer: 0
