@@ -150,6 +150,8 @@ public class ScientistAI : MonoBehaviour
 				{
 					anim.SetTrigger("Slap");
 					
+					agent.SetDestination(transform.position);
+					
 					atkStart = true;
 				}
 			}

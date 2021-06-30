@@ -162,8 +162,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0029926526, y: 0.016075522, z: 0.0035101941}
-  m_Center: {x: -0.000068682486, y: -0.00046210358, z: 0.000002207692}
+  m_Size: {x: 0.0029926526, y: 0.024906415, z: 0.0035101941}
+  m_Center: {x: -0.00006868432, y: 0.00395335, z: 0.0000022082108}
 --- !u!1001 &174911399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ GameObject:
   m_TagString: BossArena
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &508083391
 Transform:
@@ -580,8 +580,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0029926526, y: 0.016075522, z: 0.0035101941}
-  m_Center: {x: -0.000068682486, y: -0.00046210358, z: 0.000002207692}
+  m_Size: {x: 0.0029926526, y: 0.024906415, z: 0.0035101941}
+  m_Center: {x: -0.00006868432, y: 0.00395335, z: 0.0000022082108}
 --- !u!1001 &1070787021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1315,7 +1315,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1653809311}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2
+  m_Radius: 4
   m_Speed: 12
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1704,7 +1704,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2045617111
 Transform:
