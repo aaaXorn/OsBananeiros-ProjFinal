@@ -23,6 +23,10 @@ public class LoreTrigger : MonoBehaviour
 			case "Portugues":
 			lore = lorePT;
 			break;
+			
+			default:
+			lore = loreEN;
+			break;
 		}
 	}
 	

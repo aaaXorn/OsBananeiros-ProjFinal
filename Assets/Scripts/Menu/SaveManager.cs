@@ -20,7 +20,9 @@ public class SaveManager : MonoBehaviour
 
     private void Awake()
     {
-		if(CurrentStage == "") CurrentStage = "Stage1";
+		if(CurrentStage == "" || CurrentStage == null) CurrentStage = "Stage1";
+		
+		if(GameLanguage == "" || GameLanguage == null) GameLanguage = "English";
 		
         print(Application.persistentDataPath);
         if (instance != null && instance != this)
