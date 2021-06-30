@@ -10,7 +10,7 @@ Tradução: Inglês.
 
 Victor Hugo Teixeira Pontes
 Modelos: Roda de exercícios.
-Sons: Musica Base e Drum solo, passos, moeda, pulo, chave, hit, queda e movimento, interação de menu
+Sons: Musica Base e Drum solo, passos, moeda, pulo, chave, hit, queda e movimento, interação de menu, Musica boss fight
 UI: Main Menu, Pause sprite, Health Sprite
 
 Thomas Mandel Nunes Cavallini
