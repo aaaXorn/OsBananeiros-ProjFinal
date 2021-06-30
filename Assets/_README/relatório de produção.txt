@@ -20,3 +20,6 @@ Animações: Ratoelho.
 Nícolas Palácio Fray
 Modelos: Cientista maluco (boss)
 Animação: Cientista maluco
+
+Thomas Nojiri Muller
+Modelos: Gaiola do stage 1, Cenoura, Chave da gaiola, grampeador, microscópio.
